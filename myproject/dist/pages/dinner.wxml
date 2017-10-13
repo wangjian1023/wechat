@@ -1,74 +1,50 @@
 
   <view>
-    <view class="text">
-      <text>简单2步，选中心动好礼</text>
-    </view>
-    <view class="suibian">
-      <view class="cat ss">
-        <image class="quan" src="{{person}}"/>
+    <view class="background">
+      <view class="text">
+        <text class="size">男人流行发型指南攻略</text>
       </view>
-      <view class="line ss"/>
-      <view class="cat ss">
-        <image class="quan" src="{{like}}"/>
+
+      <view>
+        <view class="section">
+          <input placeholder="发型" focus="{{focus}}" config-type="search" class="input"/>
+        </view>
+        <view class="top mouse">
+          <view>
+            <image bindtap="a" class="photo" src="{{fair1}}"/>
+          </view>
+          <view bindtap="a" class="cat">
+            <text class="suibian">中发</text>
+            <text class="text">MEDIUMHAIR</text>
+          </view>
+        </view>
+        <view class="top mouse">
+          <view>
+            <image bindtap="b" class="photo" src="{{fair2}}"/>
+          </view>
+          <view bindtap="b" class="cat">
+            <text class="suibian">短发</text>
+            <text class="text">SHORTHAIR</text>
+          </view>
+        </view>
+        <view class="top mouse">
+          <view>
+            <image bindtap="c" class="photo" src="{{fair3}}"/>
+          </view>
+          <view bindtap="c" class="cat">
+            <text class="suibian">长发</text>
+            <text class="text">LONGHAIR</text>
+          </view>
+        </view>
+
       </view>
-      <view class="line ss"/>
-      <view class="cat ss">
-        <image class="quan" src="{{finish}}"/>
+      <view class="empty">
+        <text/>
+      </view>
+
+      <view class="bottom">
+        <text class="size">/MAN男人每天造型/</text>
       </view>
     </view>
 
-    <view class="list">
-      <text>送给TA</text>
-      <text>TA喜欢</text>
-      <text>完成</text>
-    </view>
-
-    <view class="dog">
-      <text bindtap="she" style="color:{{pink}}; border-bottom:3px solid {{solidred}}" class="dog">送她</text>
-      <text bindtap="he" style="color:{{red}}; border-bottom:3px solid {{solidpink}}" class="dog">送他</text>
-    </view>
-
-    <view class="pop">
-      <view class="mouse ss">
-        <view class="shulie ss">
-          <image class="photo" src="{{camera}}"/>
-          <text>自己</text>
-        </view>
-      </view>
-      <view class="mouse ss">
-        <view class="shulie ss">
-          <image class="photo" src="{{ring}}"/>
-          <text>{{wife}}</text>
-        </view>
-      </view>
-      <view class="mouse ss">
-        <view class="shulie ss">
-          <image class="photo" src="{{lipstrick}}"/>
-          <text>{{sister}}</text>
-        </view>
-      </view>
-    </view>
-    <view class="pop">
-      <view class="six ss">
-        <view class="shulie ss">
-          <image class="photo" src="{{flower}}"/>
-          <text>{{mother}}</text>
-        </view>
-      </view>
-      <view class="six ss">
-        <view class="shulie ss">
-          <image class="photo" src="{{elder}}"/>
-          <text>长辈</text>
-        </view>
-      </view>
-      <view class="six ss">
-        <view class="shulie ss">
-          <image class="photo" src="{{wallet}}"/>
-          <text>同事</text>
-        </view>
-      </view>
-    </view>
-    <view class="ww">
-      <text>再看看，先逛逛></text>
-    </view>
   </view>

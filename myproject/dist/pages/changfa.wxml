@@ -1,0 +1,39 @@
+
+  <view>
+
+    <view class="row">
+      <view class="border">
+        <text bindtap="a" class="text">最热</text>
+      </view>
+      <view class="border">
+        <text bindtap="b" class="text">丸子头</text>
+      </view>
+      <view class="border">
+        <text bindtap="c" class="text">卷发</text>
+      </view>
+      <view class="border">
+        <text bindtap="d" class="text">长发</text>
+      </view>
+    </view>
+    <!-- <view class="pop">
+      <view class="six ss">
+        <view class="shulie ss">
+          <image class="photo" src="{{flower}}" />
+          <text>{{mother}}</text>
+        </view>
+      </view>
+      <view class="six ss">
+        <view class="shulie ss">
+          <image class="photo" src="{{elder}}" />
+          <text>长辈</text>
+        </view>
+      </view>
+      <view class="six ss">
+        <view class="shulie ss">
+          <image class="photo" src="{{wallet}}" />
+          <text>同事</text>
+        </view>
+      </view>
+    </view> -->
+
+  </view>

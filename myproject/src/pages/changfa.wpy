@@ -1,0 +1,99 @@
+<style lang = "less">
+.border {
+  display: flex;
+  flex-direction: row;
+  height: 2rem;
+  width: 3rem;
+  border-radius: 50%;
+  border: 1px solid green;
+  margin-left: 12px;
+  justify-content: center;
+  align-items: center;
+}
+
+.text {
+  display: flex;
+  font-size: 10px;
+  color: gray;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+}
+</style>
+
+<template>
+  <view>
+
+    <view class="row">
+      <view class="border">
+        <text @tap="a" class="text">最热</text>
+      </view>
+      <view class="border">
+        <text @tap="b" class="text">丸子头</text>
+      </view>
+      <view class="border">
+        <text @tap="c" class="text">卷发</text>
+      </view>
+      <view class="border">
+        <text @tap="d" class="text">长发</text>
+      </view>
+    </view>
+    <!-- <view class="pop">
+      <view class="six ss">
+        <view class="shulie ss">
+          <image class="photo" src="{{flower}}" />
+          <text>{{mother}}</text>
+        </view>
+      </view>
+      <view class="six ss">
+        <view class="shulie ss">
+          <image class="photo" src="{{elder}}" />
+          <text>长辈</text>
+        </view>
+      </view>
+      <view class="six ss">
+        <view class="shulie ss">
+          <image class="photo" src="{{wallet}}" />
+          <text>同事</text>
+        </view>
+      </view>
+    </view> -->
+
+  </view>
+</template>
+
+<script>
+import wepy from 'wepy'
+
+export default class Index extends wepy.page {
+  data = {
+
+  }
+  methods = {
+    a() {
+      wepy.navigateTo({
+        url: '../pages/zuire'
+      })
+    },
+    b() {
+      wepy.navigateTo({
+        url: '../pages/wanzitou'
+      })
+    },
+    c() {
+      wepy.navigateTo({
+        url: '../pages/juan'
+      })
+    },
+    d() {
+      wepy.navigateTo({
+        url: '../pages/chang'
+      })
+    }
+
+  }
+  onLoad() { }
+}
+</script>

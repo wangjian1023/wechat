@@ -1,0 +1,1 @@
+.border{display:flex;flex-direction:row;height:2rem;width:3rem;border-radius:50%;border:1px solid green;margin-left:12px;justify-content:center;align-items:center}.text{display:flex;font-size:10px;color:gray}.row{display:flex;flex-direction:row}

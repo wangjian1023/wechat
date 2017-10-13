@@ -7,7 +7,7 @@
 		"minified": false
 	},
 	"compileType": "weapp",
-	"libVersion": "1.5.4",
+	"libVersion": "1.5.0",
 	"appid": "touristappid",
 	"projectname": "wechat",
 	"condition": {

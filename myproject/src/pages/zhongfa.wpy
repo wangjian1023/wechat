@@ -1,0 +1,42 @@
+<style lang = "less">
+
+</style>
+
+<template>
+  <view>
+    <scroll-view scroll-x>
+      <view>
+        <text>人家</text>
+      </view>
+      <view>
+        <text>人家</text>
+      </view>
+      <view>
+        <text>人家</text>
+      </view>
+      <view>
+        <text>人家</text>
+      </view>
+      <view>
+        <text>人家</text>
+      </view>
+    </scroll-view>
+  </view>
+</template>
+
+<script>
+import wepy from 'wepy'
+
+export default class Index extends wepy.page {
+  config = {
+    navigationBarTitleText: '礼物说'
+  }
+  data = {
+    
+  }
+  methods = {
+    
+  }
+  onLoad() { }
+}
+</script>

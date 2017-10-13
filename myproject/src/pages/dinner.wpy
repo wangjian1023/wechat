@@ -1,191 +1,130 @@
 <style lang = "less">
 .text {
-  font-size: 20px;
+  font-size: 10ox;
   display: flex;
   justify-content: center;
 }
 
-.list {
-  display: flex;
-  font-size: 10px;
-  justify-content: space-between;
-  margin: 10px 100px 10px 100px;
-  padding: 1px  10px 2px 2px;
-  align-items: center;
-}
-
-.cat {
+.section {
   display: flex;
   align-items: center;
-  height: 1.5rem;
-  width: 1.5rem;
-  border-radius: 50%;
-  border: 1px solid gray;
+  margin: 10px 15px;
+  border: 1px solid burlywood;//线高度颜色
+  border-radius: 10px;
 }
 
-.dog {
+.top {
   display: flex;
-  font-size: 15px;
   justify-content: center;
-  margin: 0.5rem 1rem 0.625rem 1.25rem;
+  flex-direction: row;
+  margin-top: 40px;
 }
 
 .mouse {
-  background-color: pink;
-  justify-content: center;
-  height: 5rem;
-  width: 4.37rem;
-  margin-left: 0.7rem;
-  margin-right: 0.7rem;
-  margin-top: 200px;
+  flex-direction: row;
 }
 
-.six {
-  background-color: pink;
-  justify-content: center;
-  height: 5rem;
-  width: 4.37rem;
-  margin-left: 0.7rem;
-  margin-right: 0.7rem;
-  margin-top: 2rem;
-}
-
-.pop {
+.photo {
+  height: 100px;
+  width: 150px;
   display: flex;
-  justify-content: center;
-  margin-left: 20px;
-  margin-right: 20px;
-}
-
-
-.ss {
-  display: flex;
-  font-size: 10px;
-  justify-content: center;
-  margin-top: 10px;
-  align-items: center;
 }
 
 .suibian {
   display: flex;
-  justify-content: row;
-  align-items: center;
-  justify-content: space-between;
-  margin: 10px 100px 10px 100px;
+  justify-content: center;
 }
 
-.bb {
-  margin: 200px 20px 20px 20px;
-}
-
-.line {
-  height: 1px;
-  width: 90px; //确定背景
+.bottom {
+  position: fixed; //
+  bottom: 0;
+  width: 100%;
   display: flex;
   justify-content: center;
+  /* margin-bottom: 30px; */
+  font-size: 20px;
+  background-color: white;
+  color: black;
+}
+
+.cat {
+  display: flex;
+  flex-direction: column;
+  background-color: gray;
   align-items: center;
+  justify-content: center;
+  height: 100px;
+  width: 150px;
+}
+
+.empty {
+  height: 5rem;
+  width: 12.5rem;
   background-color: black;
 }
 
-.photo {
-  height: 30px;
-  width: 30px;
+.background {
+  background-color: black;
 }
 
-.quan {
-  height: 25px;
-  width: 30px;
+.size {
+  color: gray;
 }
 
-.shulie {
-  display: flex;
-  flex-direction: column;
-}
-
-.ww {
-  position: fixed; //
-  bottom: 0; //juli 底部为零
-  width: 100%; //确定背景颜色宽度
-  display: flex;
-  justify-content: center;
-  margin-bottom: 10px;
-  font-size: 15px;
+.input {
+  color: white;
 }
 </style>
 
 <template>
   <view>
-    <view class="text">
-      <text>简单2步，选中心动好礼</text>
-    </view>
-    <view class="suibian">
-      <view class="cat ss">
-        <image class="quan" src="{{person}}" />
+    <view class="background">
+      <view class="text">
+        <text class="size">男人流行发型指南攻略</text>
       </view>
-      <view class="line ss"></view>
-      <view class="cat ss">
-        <image class="quan" src="{{like}}" />
+
+      <view>
+        <view class="section">
+          <input placeholder="发型" focus="{{focus}}" config-type="search"  class="input"/>
+        </view>
+        <view class="top mouse">
+          <view>
+            <image @tap="a" class="photo" src="{{fair1}}"></image>
+          </view>
+          <view @tap="a" class="cat">
+            <text class="suibian">中发</text>
+            <text class="text">MEDIUMHAIR</text>
+          </view>
+        </view>
+        <view class="top mouse">
+          <view>
+            <image @tap="b" class="photo" src="{{fair2}}"></image>
+          </view>
+          <view @tap="b" class="cat">
+            <text class="suibian">短发</text>
+            <text class="text">SHORTHAIR</text>
+          </view>
+        </view>
+        <view class="top mouse">
+          <view>
+            <image @tap="c" class="photo" src="{{fair3}}"></image>
+          </view>
+          <view @tap="c" class="cat">
+            <text class="suibian">长发</text>
+            <text class="text">LONGHAIR</text>
+          </view>
+        </view>
+
       </view>
-      <view class="line ss"></view>
-      <view class="cat ss">
-        <image class="quan" src="{{finish}}" />
+      <view class="empty">
+        <text></text>
+      </view>
+
+      <view class="bottom">
+        <text class="size">/MAN男人每天造型/</text>
       </view>
     </view>
 
-    <view class="list">
-      <text>送给TA</text>
-      <text>TA喜欢</text>
-      <text>完成</text>
-    </view>
-
-    <view class="dog">
-      <text @tap = "she" style = "color:{{pink}}; border-bottom:3px solid {{solidred}}" class="dog">送她</text>
-      <text @tap = "he" style = "color:{{red}}; border-bottom:3px solid {{solidpink}}" class="dog">送他</text>
-    </view>
-
-    <view class="pop">
-      <view class="mouse ss">
-        <view class="shulie ss">
-          <image class="photo" src="{{camera}}" />
-          <text>自己</text>
-        </view>
-      </view>
-      <view class="mouse ss">
-        <view class="shulie ss">
-          <image class="photo" src="{{ring}}" />
-          <text>{{wife}}</text>
-        </view>
-      </view>
-      <view class="mouse ss">
-        <view class="shulie ss">
-          <image class="photo" src="{{lipstrick}}" />
-          <text>{{sister}}</text>
-        </view>
-      </view>
-    </view>
-    <view class="pop">
-      <view class="six ss">
-        <view class="shulie ss">
-          <image class="photo" src="{{flower}}" />
-          <text>{{mother}}</text>
-        </view>
-      </view>
-      <view class="six ss">
-        <view class="shulie ss">
-          <image class="photo" src="{{elder}}" />
-          <text>长辈</text>
-        </view>
-      </view>
-      <view class="six ss">
-        <view class="shulie ss">
-          <image class="photo" src="{{wallet}}" />
-          <text>同事</text>
-        </view>
-      </view>
-    </view>
-    <view class="ww">
-      <text>再看看，先逛逛></text>
-    </view>
   </view>
 </template>
 
@@ -194,59 +133,29 @@ import wepy from 'wepy'
 
 export default class Index extends wepy.page {
   config = {
-    navigationBarTitleText: '礼物说'
+    navigationBarTitleText: '男人的魅力'
   }
   data = {
     src: '',
-    person: '../image/人.png',
-    like: '../image/礼物.png',
-    finish: '../image/对勾.png',
-    camera: '../image/相机.png',
-    ring: '../image/05_钻戒.png',
-    lipstrick: '../image/口红.png',
-    flower: '../image/经典花束.png',
-    elder: '../image/衬衣.png',
-    wallet: '../image/钱包.png',
-    wife: '老婆/女票',
-    sister: '姐妹/闺蜜',
-    mother: '妈妈',
-    pink: 'pink',
-    red: 'black',
-    solidred: 'red',
-    solidpink: 'white'
+    fair1: '../image/中发界面.jpeg',
+    fair2: '../image/短发界面.jpg',
+    fair3: '../image/长发界面.jpg'
   }
   methods = {
-    she() {
-      let self = this
-      self.camera = '../image/相机.png'
-      self.ring = '../image/05_钻戒.png'
-      self.lipstrick = '../image/口红.png'
-      self.flower = '../image/经典花束.png'
-      self.elder = '../image/衬衣.png'
-      self.wallet = '../image/钱包.png'
-      self.sister = '姐妹/闺蜜'
-      self.wife = '老婆/女票'
-      self.mother = '妈妈'
-      self.pink = 'pink'
-      self.solidred = 'red'
-      self.red = 'black'
-      self.solidpink = 'white'
+    a() {
+      wepy.navigateTo({
+        url: '../pages/zhongfa'
+      })
     },
-    he() {
-      let self = this
-      self.camera = '../image/相机.png'
-      self.ring = '../image/05_钻戒.png'
-      self.wife = '老公/男票'
-      self.lipstrick = '../image/手表.png'
-      self.sister = '兄弟/基友'
-      self.flower = '../image/眼镜.png'
-      self.mother = '爸爸'
-      self.elder = '../image/衬衣.png'
-      self.wallet = '../image/钱包.png'
-      self.red = 'red'
-      self.solidpink = 'red'
-      self.pink = 'black'
-      self.solidred = 'white'
+    b() {
+      wepy.navigateTo({
+        url: '../pages/duanfa'
+      })
+    },
+    c() {
+      wepy.navigateTo({
+        url: '../pages/changfa'
+      })
     }
   }
   onload() { }

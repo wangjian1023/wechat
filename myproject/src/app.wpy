@@ -17,11 +17,14 @@ export default class extends wepy.app {
   config = {
     pages: [
       'pages/dinner',
+      'pages/duanfa',
+      'pages/zhongfa',
+      'pages/changfa',
       'pages/index'
     ],
     window: {
       backgroundTextStyle: 'light',
-      navigationBarBackgroundColor: 'pink',
+      navigationBarBackgroundColor: 'gray',
       navigationBarTitleText: 'WeChat',
       navigationBarTextStyle: 'black'
     }

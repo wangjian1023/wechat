@@ -1,0 +1,20 @@
+
+  <view>
+    <scroll-view scroll-x>
+      <view>
+        <text>人家</text>
+      </view>
+      <view>
+        <text>人家</text>
+      </view>
+      <view>
+        <text>人家</text>
+      </view>
+      <view>
+        <text>人家</text>
+      </view>
+      <view>
+        <text>人家</text>
+      </view>
+    </scroll-view>
+  </view>
