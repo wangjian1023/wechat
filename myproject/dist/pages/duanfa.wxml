@@ -1,74 +1,67 @@
 
-  <view>
-    <view class="text">
-      <text>简单2步，选中心动好礼</text>
-    </view>
-    <view class="suibian">
-      <view class="cat ss">
-        <image class="quan" src="{{person}}"/>
-      </view>
-      <view class="line ss"/>
-      <view class="cat ss">
-        <image class="quan" src="{{like}}"/>
-      </view>
-      <view class="line ss"/>
-      <view class="cat ss">
-        <image class="quan" src="{{finish}}"/>
-      </view>
-    </view>
+  <view class="class">
 
-    <view class="list">
-      <text>送给TA</text>
-      <text>TA喜欢</text>
-      <text>完成</text>
-    </view>
-
-    <view class="dog">
-      <text bindtap="she" style="color:{{pink}}; border-bottom:3px solid {{solidred}}" class="dog">送她</text>
-      <text bindtap="he" style="color:{{red}}; border-bottom:3px solid {{solidpink}}" class="dog">送他</text>
-    </view>
-
-    <view class="pop">
-      <view class="mouse ss">
-        <view class="shulie ss">
-          <image class="photo" src="{{camera}}"/>
-          <text>自己</text>
-        </view>
+    <view class="row">
+      <view class="border" style="border: 1px solid {{color}};">
+        <text bindtap="zuire" class="text">最热</text>
       </view>
-      <view class="mouse ss">
-        <view class="shulie ss">
-          <image class="photo" src="{{ring}}"/>
-          <text>{{wife}}</text>
-        </view>
+      <view class="border" style="border: 1px solid {{color1}};">
+        <text bindtap="wanzi" class="text">丸子头</text>
       </view>
-      <view class="mouse ss">
-        <view class="shulie ss">
-          <image class="photo" src="{{lipstrick}}"/>
-          <text>{{sister}}</text>
-        </view>
+      <view class="border" style="border: 1px solid {{color2}};">
+        <text bindtap="c" class="text">卷发</text>
+      </view>
+      <view class="border" style="border: 1px solid {{color3}};">
+        <text bindtap="d" class="text">长发</text>
       </view>
     </view>
     <view class="pop">
-      <view class="six ss">
-        <view class="shulie ss">
-          <image class="photo" src="{{flower}}"/>
-          <text>{{mother}}</text>
+      <view class="column six">
+        <view class="photo">
+          <image class="photo" src="{{first}}"/>
+          </view>
+        <view class="row ">
+          <text class="text1">个性头扎</text>
+          <!-- <image class="input" scr="{{star1}}" /> -->
         </view>
       </view>
-      <view class="six ss">
-        <view class="shulie ss">
-          <image class="photo" src="{{elder}}"/>
-          <text>长辈</text>
-        </view>
-      </view>
-      <view class="six ss">
-        <view class="shulie ss">
-          <image class="photo" src="{{wallet}}"/>
-          <text>同事</text>
-        </view>
+      <view class="column six">
+        <image class="photo" src="{{like}}"/>
+        <text class="text1">底切丸子头</text>
       </view>
     </view>
-    <view class="ww">
-      <text>再看看，先逛逛></text>
+
+    <view class="pop">
+      <view class="column six">
+        <image class="photo" src="{{finish}}"/>
+        <text class="text1">欧美丸子头扎发</text>
+      </view>
+      <view class="column six">
+        <image class="photo" src="{{camera}}"/>
+        <text class="text1">{{wife}}</text>
+      </view>
     </view>
+
+    <view class="pop">
+      <view class="column six">
+        <image class="photo" src="{{ring}}"/>
+        <text class="text1">{{sister1}}</text>
+      </view>
+      <view class="column six">
+        <image class="photo" src="{{lipstrick}}"/>
+        <text class="text1">{{sister}}</text>
+      </view>
+    </view>
+
+    <view class="pop">
+      <view class="column six">
+        <image class="photo" src="{{flower}}"/>
+        <text class="text1">{{mother}}</text>
+      </view>
+      <view class="column six">
+        <image class="photo" src="{{elder}}"/>
+        <text class="text1">{{son}}</text>
+      </view>
+    </view>
+
   </view>

@@ -9,7 +9,7 @@
   display: flex;
   align-items: center;
   margin: 10px 15px;
-  border: 1px solid burlywood;//线高度颜色
+  border: 1px solid burlywood; //线高度颜色
   border-radius: 10px;
 }
 
@@ -41,7 +41,6 @@
   width: 100%;
   display: flex;
   justify-content: center;
-  /* margin-bottom: 30px; */
   font-size: 20px;
   background-color: white;
   color: black;
@@ -85,7 +84,7 @@
 
       <view>
         <view class="section">
-          <input placeholder="发型" focus="{{focus}}" config-type="search"  class="input"/>
+          <input placeholder="发型" focus="{{focus}}" config-type="search" class="input" />
         </view>
         <view class="top mouse">
           <view>

@@ -2,64 +2,141 @@
 .border {
   display: flex;
   flex-direction: row;
-  height: 2rem;
-  width: 3rem;
-  border-radius: 50%;
-  border: 1px solid green;
+  height: 1rem;
+  width: 2rem;
+  border-radius: 1rem;
   margin-left: 12px;
   justify-content: center;
   align-items: center;
+  margin-top: 10px;
 }
 
 .text {
   display: flex;
   font-size: 10px;
+  justify-content: center;
+  color: black;
+}
+
+.text1 {
+  display: flex;
+  font-size: 20px;
+  justify-content: center;
   color: gray;
 }
 
 .row {
   display: flex;
   flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.photo {
+  height: 175px;
+  width: 180px;
+}
+.input {
+  height: 30px;
+  width: 30px;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+}
+
+.pop {
+  display: flex;
+  justify-content: center;
+  /* background-color: black; */
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-top: 30px;
+}
+
+.six {
+  display: flex;
+  justify-content: center;
+  height: 200px;
+  width: 190px;
+  margin-left: 0.7rem;
+  margin-right: 0.7rem;
+}
+
+.background {
+  background-color: blue;
+}
+.margintop {
+  margin-top: 0px;
 }
 </style>
 
 <template>
-  <view>
+  <view class>
 
     <view class="row">
-      <view class="border">
-        <text @tap="a" class="text">最热</text>
+      <view class="border" style="border: 1px solid {{color}};">
+        <text @tap="zuire" class="text">最热</text>
       </view>
-      <view class="border">
-        <text @tap="b" class="text">丸子头</text>
+      <view class="border" style="border: 1px solid {{color1}};">
+        <text @tap="wanzi" class="text">丸子头</text>
       </view>
-      <view class="border">
+      <view class="border" style="border: 1px solid {{color2}};">
         <text @tap="c" class="text">卷发</text>
       </view>
-      <view class="border">
+      <view class="border" style="border: 1px solid {{color3}};">
         <text @tap="d" class="text">长发</text>
       </view>
     </view>
-    <!-- <view class="pop">
-      <view class="six ss">
-        <view class="shulie ss">
-          <image class="photo" src="{{flower}}" />
-          <text>{{mother}}</text>
+    <view class="pop">
+      <view class="column six">
+        <view class="photo">
+          <image class="photo" src="{{first}}" />
+          </view>
+        <view class="row ">
+          <text class="text1">个性头扎</text>
+          <!-- <image class="input" scr="{{star1}}" /> -->
         </view>
       </view>
-      <view class="six ss">
-        <view class="shulie ss">
-          <image class="photo" src="{{elder}}" />
-          <text>长辈</text>
-        </view>
+      <view class="column six">
+        <image class="photo" src="{{like}}" />
+        <text class="text1">底切丸子头</text>
       </view>
-      <view class="six ss">
-        <view class="shulie ss">
-          <image class="photo" src="{{wallet}}" />
-          <text>同事</text>
-        </view>
+    </view>
+
+    <view class="pop">
+      <view class="column six">
+        <image class="photo" src="{{finish}}" />
+        <text class="text1">欧美丸子头扎发</text>
       </view>
-    </view> -->
+      <view class="column six">
+        <image class="photo" src="{{camera}}" />
+        <text class="text1">{{wife}}</text>
+      </view>
+    </view>
+
+    <view class="pop">
+      <view class="column six">
+        <image class="photo" src="{{ring}}" />
+        <text class="text1">{{sister1}}</text>
+      </view>
+      <view class="column six">
+        <image class="photo" src="{{lipstrick}}" />
+        <text class="text1">{{sister}}</text>
+      </view>
+    </view>
+
+    <view class="pop">
+      <view class="column six">
+        <image class="photo" src="{{flower}}" />
+        <text class="text1">{{mother}}</text>
+      </view>
+      <view class="column six">
+        <image class="photo" src="{{elder}}" />
+        <text class="text1">{{son}}</text>
+      </view>
+    </view>
 
   </view>
 </template>
@@ -69,30 +146,93 @@ import wepy from 'wepy'
 
 export default class Index extends wepy.page {
   data = {
+    src: '',
+    first: '../image/个性扎头.jpg',
+    like: '../image/底切丸子头.jpeg',
+    finish: '../image/欧美丸子头扎发.jpeg',
+    camera: '../image/欧美卷发.jpg',
+    ring: '../image/欧美长卷发.jpg',
+    lipstrick: '../image/欧美长卷发1.png',
+    flower: '../image/白色卷发.jpg',
+    elder: '../image/青年长发.jpg',
+    small: '../image/亚洲卷发.jpg',
+    loof: '../image/欧美卷发1.jpg',
+    // star: '../image/五角星-2.jpg',
+    // star1: '../image/五角星.jpg'
+    ax: '../image/个性丸子头.jpg',
+    border: '../image/亚洲个性丸子头.jpg',
+    cdi: '../image/完整丸子头.jpg',
+    define: '../image/男士丸子头.jpg',
+    default: '../image/男士丸子头.jpg',
+    color: 'white',
+    color1: 'white',
+    color2: 'white',
+    color3: 'white',
+    wife: '欧美卷发',
+    sister: '欧美长卷发',
+    sister1: '欧美长卷发',
+    mother: '白色卷发',
+    son: '白色卷发'
 
   }
   methods = {
-    a() {
-      wepy.navigateTo({
-        url: '../pages/zuire'
-      })
+    zuire() {
+      let self = this
+      self.first = '../image/个性扎头.jpg'
+      self.like = '../image/底切丸子头.jpeg'
+      self.finish = '../image/欧美丸子头扎发.jpeg'
+      self.camera = '../image/欧美卷发.jpg'
+      self.ring = '../image/欧美长卷发.jpg'
+      self.lipstrick = '../image/欧美长卷发1.png'
+      self.flower = '../image/白色卷发.jpg'
+      self.elder = '../image/青年长发.jpg'
+      self.wife = '欧美卷发'
+      self.sister = '欧美长卷发'
+      self.sister2 = '欧美长卷发'
+      self.mother = '白色卷发'
+      self.son = '白色卷发'
+      self.color = 'gray'
+      self.color1 = 'white'
+      self.color2 = 'white'
+      self.color3 = 'white'
     },
-    b() {
-      wepy.navigateTo({
-        url: '../pages/wanzitou'
-      })
+    wanzi() {
+      let self = this
+      self.first = '../image/个性扎头.jpg'
+      self.like = '../image/底切丸子头.jpeg'
+      self.finish = '../image/欧美丸子头扎发.jpeg'
+      self.camera = '../image/个性丸子头.jpg'
+      self.ring = '../image/亚洲个性丸子头.jpg'
+      self.lipstrick = '../image/完整丸子头.png'
+      self.flower = '../image/男士丸子头.jpg'
+      self.elder = '../image/帅气扎发.png'
+      this.wife = '个性丸子头'
+      this.sister = '亚洲个性丸子头'
+      this.sister1 = '亚洲个性丸子头'
+      this.mother = '完整丸子头'
+      this.son = '男士丸子头'
+      self.color1 = 'gray'
+      self.color = 'white'
+      self.color3 = 'white'
     },
     c() {
-      wepy.navigateTo({
-        url: '../pages/juan'
-      })
-    },
-    d() {
-      wepy.navigateTo({
-        url: '../pages/chang'
-      })
+      let self = this
+      self.first = '../image/个性扎头.jpg'
+      self.like = '../image/底切丸子头.jpeg'
+      self.finish = '../image/欧美丸子头扎发.jpeg'
+      self.camera = '../image/个性丸子头.jpg'
+      self.ring = '../image/亚洲个性丸子头.jpg'
+      self.lipstrick = '../image/完整丸子头.png'
+      self.flower = '../image/男士丸子头.jpg'
+      self.elder = '../image/帅气扎发.png'
+      this.wife = '个性丸子头'
+      this.sister = '亚洲个性丸子头'
+      this.mother = '完整丸子头'
+      this.son = '男士丸子头'
+      self.color1 = 'gray'
+      self.color = 'white'
+      self.color3 = 'white'
     }
-
   }
   onLoad() { }
 }
