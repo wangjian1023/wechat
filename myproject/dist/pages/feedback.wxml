@@ -1,0 +1,14 @@
+
+  <view class="back">
+    <view class="image column">
+      <view class="marginleft">
+        <text>意见反馈</text>
+      </view>
+      <view class="backer" bindtap="border">
+        <textarea class="border"/>
+      </view>
+      <view class="backer">
+        <botton class="bottom">提交</botton>
+      </view>
+    </view>
+  </view>

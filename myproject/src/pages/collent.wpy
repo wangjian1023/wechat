@@ -1,0 +1,102 @@
+<style lang = "less">
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.userinfo-avatar {
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 50%;
+}
+
+.userinfo-nickname {
+  color: gray;
+}
+
+.back {
+  background-image: url(http://img1.imgtn.bdimg.com/it/u=1556430450,1203462691&fm=27&gp=0.jpg);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  bottom: 0;
+}
+.text {
+  font-size: 20px;
+  color: red;
+  align-items: center;
+}
+.border {
+  display: flex;
+  height: 40px;
+  width: 405px;
+  margin-top: 20px;
+  border: 2px solid gray;
+}
+
+</style>
+
+<template>
+  <view>
+    <view class="back">
+        <view class="userinfo">
+          <image class="userinfo-avatar" src="{{avatarUrl}}" background-size="cover" />
+          <view class="userinfo-nickname">{{nickname}}</view>
+        </view>
+        <view @tap="a" class="text border">
+          <text>我的收藏</text>
+        </view>
+        <view  @tap="b" class="text border">
+          <text>用户反馈</text>
+        </view>
+        <view @tap="c" class="text border">
+          <text>关于我们</text>
+        </view>    
+    </view>
+  </view>  
+</template>
+
+<script>
+import wepy from 'wepy'
+
+export default class Index extends wepy.page {
+  config = {
+    navigationBarTitleText: '男人的魅力'
+  }
+  data = {
+    src: '',
+    avatarUrl: '',
+    nickname: ''
+  }
+
+  methods = {
+    a() {
+      wepy.navigateTo({
+        url: '../pages/love'
+      })
+    },
+    b() {
+      wepy.navigateTo({
+        url: '../pages/feedback'
+      })
+    },
+    c() {
+      wepy.navigateTo({
+        url: '../pages/ours'
+      })
+    }
+  }
+  onLoad() {
+    let self = this
+    wepy.getUserInfo({
+      success: function(res) {
+        self.nickname = res.userInfo.nickName
+        self.avatarUrl = res.userInfo.avatarUrl
+      }
+    })
+  }
+}
+</script>

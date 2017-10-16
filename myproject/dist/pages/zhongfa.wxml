@@ -1,20 +1,32 @@
 
-  <view>
-    <scroll-view scroll-x>
-      <view>
-        <text>人家</text>
-      </view>
-      <view>
-        <text>人家</text>
-      </view>
-      <view>
-        <text>人家</text>
-      </view>
-      <view>
-        <text>人家</text>
-      </view>
-      <view>
-        <text>人家</text>
+  <view class="back">
+    <scroll-view scroll-x="true">
+      <view class="row" bindsxroll="scroll">
+        <view class="border" style="border: 2px solid {{color}};">
+          <text bindtap="zuire" class="text">最热</text>
+        </view>
+        <view class="border" style="border: 2px solid {{color1}};">
+          <text bindtap="data1" class="text">西瓜头</text>
+        </view>
+        <view class="border" style="border: 2px solid {{color2}};">
+          <text bindtap="egg" class="text">中分</text>
+        </view>
+        <view class="border" style="border: 2px solid {{color3}};">
+          <text bindtap="props" class="text">侧分</text>
+        </view>
+        <view class="border" style="border: 2px solid {{color4}};">
+          <text bindtap="script" class="text">卷发</text>
+        </view>
+        <view class="border" style="border: 2px solid {{color5}};">
+          <text bindtap="method" class="text">刘海</text>
+        </view>
+        <view class="border" style="border: 2px solid {{color6}};">
+          <text bindtap="less" class="text">背头</text>
+        </view>
+        <view class="border" style="border: 2px solid {{color7}};">
+          <text bindtap="page" class="text">锅盖头</text>
+        </view>
       </view>
     </scroll-view>
+
   </view>

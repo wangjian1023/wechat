@@ -15,7 +15,7 @@
   display: flex;
   font-size: 10px;
   justify-content: center;
-  color: black;
+  color: gray;
 }
 
 .text1 {
@@ -65,7 +65,7 @@
 }
 
 .background {
-  background-color: blue;
+  background-color: black;
 }
 .margintop {
   margin-top: 0px;
@@ -73,7 +73,7 @@
 </style>
 
 <template>
-  <view class>
+  <view class="background">
 
     <view class="row">
       <view class="border" style="border: 1px solid {{color}};">
@@ -94,21 +94,21 @@
         <view class="photo">
           <image class="photo" src="{{first}}" />
           </view>
-        <view class="row ">
-          <text class="text1">个性头扎</text>
-          <!-- <image class="input" scr="{{star1}}" /> -->
-        </view>
+        <!-- <view class="row "> -->
+          <text class="text1">{{wepyy}}</text>
+          <!-- <image class="input" src="{{star}}" /> -->
+        <!-- </view> -->
       </view>
       <view class="column six">
         <image class="photo" src="{{like}}" />
-        <text class="text1">底切丸子头</text>
+        <text class="text1">{{direction}}</text>
       </view>
     </view>
 
     <view class="pop">
       <view class="column six">
         <image class="photo" src="{{finish}}" />
-        <text class="text1">欧美丸子头扎发</text>
+        <text class="text1">{{from}}</text>
       </view>
       <view class="column six">
         <image class="photo" src="{{camera}}" />
@@ -145,6 +145,9 @@
 import wepy from 'wepy'
 
 export default class Index extends wepy.page {
+  config = {
+    navigationBarTitleText: '男人的魅力'
+  }
   data = {
     src: '',
     first: '../image/个性扎头.jpg',
@@ -157,22 +160,27 @@ export default class Index extends wepy.page {
     elder: '../image/青年长发.jpg',
     small: '../image/亚洲卷发.jpg',
     loof: '../image/欧美卷发1.jpg',
-    // star: '../image/五角星-2.jpg',
-    // star1: '../image/五角星.jpg'
+    wepy: '../image/欧美卷发3.jpg',
+    extends: '../image/欧美个性潮男.jpg',
+    star: '../image/五角星(2).png',
+    star1: '../image/五角星(1).png',
     ax: '../image/个性丸子头.jpg',
     border: '../image/亚洲个性丸子头.jpg',
     cdi: '../image/完整丸子头.jpg',
     define: '../image/男士丸子头.jpg',
     default: '../image/男士丸子头.jpg',
-    color: 'white',
-    color1: 'white',
-    color2: 'white',
-    color3: 'white',
+    color: 'black',
+    color1: 'black',
+    color2: 'black',
+    color3: 'black',
     wife: '欧美卷发',
     sister: '欧美长卷发',
     sister1: '欧美长卷发',
     mother: '白色卷发',
-    son: '白色卷发'
+    son: '白色卷发',
+    wepyy: '个性头扎',
+    direction: '底切丸子头',
+    from: '欧美丸子头扎发'
 
   }
   methods = {
@@ -191,10 +199,13 @@ export default class Index extends wepy.page {
       self.sister2 = '欧美长卷发'
       self.mother = '白色卷发'
       self.son = '白色卷发'
+      self.wepyy = '个性头扎'
+      self.direction = '底切丸子头'
+      self.from = '欧美丸子头扎发'
       self.color = 'gray'
-      self.color1 = 'white'
-      self.color2 = 'white'
-      self.color3 = 'white'
+      self.color1 = 'black'
+      self.color2 = 'black'
+      self.color3 = 'black'
     },
     wanzi() {
       let self = this
@@ -211,27 +222,42 @@ export default class Index extends wepy.page {
       this.sister1 = '亚洲个性丸子头'
       this.mother = '完整丸子头'
       this.son = '男士丸子头'
+      self.wepyy = '个性扎头'
+      self.direction = '底切丸子头'
+      self.from = '欧美丸子头扎发'
       self.color1 = 'gray'
-      self.color = 'white'
-      self.color3 = 'white'
+      self.color = 'black'
+      self.color3 = 'black'
+      self.color2 = 'black'
     },
     c() {
       let self = this
-      self.first = '../image/个性扎头.jpg'
-      self.like = '../image/底切丸子头.jpeg'
-      self.finish = '../image/欧美丸子头扎发.jpeg'
-      self.camera = '../image/个性丸子头.jpg'
-      self.ring = '../image/亚洲个性丸子头.jpg'
-      self.lipstrick = '../image/完整丸子头.png'
-      self.flower = '../image/男士丸子头.jpg'
-      self.elder = '../image/帅气扎发.png'
-      this.wife = '个性丸子头'
-      this.sister = '亚洲个性丸子头'
-      this.mother = '完整丸子头'
-      this.son = '男士丸子头'
-      self.color1 = 'gray'
-      self.color = 'white'
-      self.color3 = 'white'
+      self.first = '../image/欧美个性潮男.jpg'
+      self.like = '../image/欧美卷发3.jpg'
+      self.finish = '../image/亚洲卷发.jpg'
+      self.camera = '../image/欧美卷发.jpg'
+      self.ring = '../image/欧美长卷发.jpg'
+      self.lipstrick = '../image/欧美长卷发1.png'
+      self.flower = '../image/白色卷发.jpg'
+      self.elder = '../image/亚洲长卷发.jpg'
+      self.wepy = '欧美个性潮男'
+      self.sister = '欧美卷发'
+      self.sister1 = '欧美长发'
+      self.mother = '欧美长卷发'
+      self.son = '亚洲卷发'
+      self.wepyy = '亚洲长卷发'
+      self.direction = '欧美卷发'
+      self.from = '亚洲长卷发'
+      self.color2 = 'gray'
+      self.color = 'black'
+      self.color1 = 'black'
+      self.color3 = 'black'
+    },
+    d() {
+      self.color3 = 'gray'
+      self.color = 'black'
+      self.color1 = 'black'
+      self.color2 = 'black'
     }
   }
   onLoad() { }

@@ -1,26 +1,74 @@
 <style lang = "less">
+.border {
+  display: flex;
+  flex-direction: row;
+  height: 1rem;
+  width: 4rem;
+  border-radius: 1rem;
+  margin: 1rem;
+}
 
+.row {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  /* white-space: nowrap */
+  /* justify-content: center;
+  align-items: center; */
+}
+
+.text {
+  display: flex;
+  font-size: 0.7rem;
+  justify-content: center;
+  align-items: center;
+  color: gray;
+  height: 1rem;
+  width: 3rem
+}
+
+.back {
+  background-image: url(http://img1.imgtn.bdimg.com/it/u=1556430450,1203462691&fm=27&gp=0.jpg);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  bottom: 0;
+}
 </style>
 
 <template>
-  <view>
-    <scroll-view scroll-x>
-      <view>
-        <text>人家</text>
-      </view>
-      <view>
-        <text>人家</text>
-      </view>
-      <view>
-        <text>人家</text>
-      </view>
-      <view>
-        <text>人家</text>
-      </view>
-      <view>
-        <text>人家</text>
+  <view class="back">
+    <scroll-view scroll-x="true">
+      <view class="row" bindsxroll="scroll">
+        <view class="border" style="border: 2px solid {{color}};">
+          <text @tap="zuire" class="text">最热</text>
+        </view>
+        <view class="border" style="border: 2px solid {{color1}};">
+          <text @tap="data1" class="text">西瓜头</text>
+        </view>
+        <view class="border" style="border: 2px solid {{color2}};">
+          <text @tap="egg" class="text">中分</text>
+        </view>
+        <view class="border" style="border: 2px solid {{color3}};">
+          <text @tap="props" class="text">侧分</text>
+        </view>
+        <view class="border" style="border: 2px solid {{color4}};">
+          <text @tap="script" class="text">卷发</text>
+        </view>
+        <view class="border" style="border: 2px solid {{color5}};">
+          <text @tap="method" class="text">刘海</text>
+        </view>
+        <view class="border" style="border: 2px solid {{color6}};">
+          <text @tap="less" class="text">背头</text>
+        </view>
+        <view class="border" style="border: 2px solid {{color7}};">
+          <text @tap="page" class="text">锅盖头</text>
+        </view>
       </view>
     </scroll-view>
+
   </view>
 </template>
 
@@ -29,13 +77,115 @@ import wepy from 'wepy'
 
 export default class Index extends wepy.page {
   config = {
-    navigationBarTitleText: '礼物说'
+    navigationBarTitleText: '男人的魅力'
   }
   data = {
-    
+    src: '',
+    color: 'black',
+    color1: 'red',
+    color2: 'black',
+    color3: 'black',
+    color4: 'black',
+    color5: 'black',
+    color6: 'black',
+    color7: 'black'
   }
   methods = {
-    
+    zuire() {
+      let self = this
+      self.color = 'red'
+      self.color1 = 'black'
+      self.color2 = 'black'
+      self.color3 = 'black'
+      self.color4 = 'black'
+      self.color5 = 'black'
+      self.color6 = 'black'
+      self.color7 = 'black'
+    },
+
+    data1() {
+      let self = this
+      self.color = 'black'
+      self.color1 = 'red'
+      self.color2 = 'black'
+      self.color3 = 'black'
+      self.color4 = 'black'
+      self.color5 = 'black'
+      self.color6 = 'black'
+      self.color7 = 'black'
+    },
+
+    egg() {
+      let self = this
+      self.color = 'black'
+      self.color1 = 'black'
+      self.color2 = 'red'
+      self.color3 = 'black'
+      self.color4 = 'black'
+      self.color5 = 'black'
+      self.color6 = 'black'
+      self.color7 = 'black'
+    },
+
+    props() {
+      let self = this
+      self.color = 'black'
+      self.color1 = 'black'
+      self.color2 = 'black'
+      self.color3 = 'red'
+      self.color4 = 'black'
+      self.color5 = 'black'
+      self.color6 = 'black'
+      self.color7 = 'black'
+    },
+
+    script() {
+      let self = this
+      self.color = 'black'
+      self.color1 = 'black'
+      self.color2 = 'black'
+      self.color3 = 'black'
+      self.color4 = 'red'
+      self.color5 = 'black'
+      self.color6 = 'black'
+      self.color7 = 'black'
+    },
+
+    method() {
+      let self = this
+      self.color = 'black'
+      self.color1 = 'black'
+      self.color2 = 'black'
+      self.color3 = 'black'
+      self.color4 = 'black'
+      self.color5 = 'red'
+      self.color6 = 'black'
+      self.color7 = 'black'
+    },
+
+    less() {
+      let self = this
+      self.color = 'black'
+      self.color1 = 'black'
+      self.color2 = 'black'
+      self.color3 = 'black'
+      self.color4 = 'black'
+      self.color5 = 'black'
+      self.color6 = 'red'
+      self.color7 = 'black'
+    },
+
+    page() {
+      let self = this
+      self.color = 'black'
+      self.color1 = 'black'
+      self.color2 = 'black'
+      self.color3 = 'black'
+      self.color4 = 'black'
+      self.color5 = 'black'
+      self.color6 = 'black'
+      self.color7 = 'red'
+    }
   }
   onLoad() { }
 }

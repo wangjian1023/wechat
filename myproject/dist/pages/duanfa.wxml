@@ -1,40 +1,37 @@
 
-  <view class="class">
+  <view class="background">
 
     <view class="row">
       <view class="border" style="border: 1px solid {{color}};">
         <text bindtap="zuire" class="text">最热</text>
       </view>
       <view class="border" style="border: 1px solid {{color1}};">
-        <text bindtap="wanzi" class="text">丸子头</text>
+        <text bindtap="wanzi" class="text">侧分</text>
       </view>
       <view class="border" style="border: 1px solid {{color2}};">
-        <text bindtap="c" class="text">卷发</text>
-      </view>
-      <view class="border" style="border: 1px solid {{color3}};">
-        <text bindtap="d" class="text">长发</text>
+        <text bindtap="c" class="text">寸头</text>
       </view>
     </view>
     <view class="pop">
       <view class="column six">
         <view class="photo">
           <image class="photo" src="{{first}}"/>
-          </view>
-        <view class="row ">
-          <text class="text1">个性头扎</text>
-          <!-- <image class="input" scr="{{star1}}" /> -->
         </view>
+        <!-- <view class="row "> -->
+        <text class="text1">{{wepyy}}</text>
+        <!-- <image class="input" src="{{star}}" /> -->
+        <!-- </view> -->
       </view>
       <view class="column six">
         <image class="photo" src="{{like}}"/>
-        <text class="text1">底切丸子头</text>
+        <text class="text1">{{direction}}</text>
       </view>
     </view>
 
     <view class="pop">
       <view class="column six">
         <image class="photo" src="{{finish}}"/>
-        <text class="text1">欧美丸子头扎发</text>
+        <text class="text1">{{from}}</text>
       </view>
       <view class="column six">
         <image class="photo" src="{{camera}}"/>

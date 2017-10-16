@@ -1,0 +1,11 @@
+
+
+<view>
+    <view class="back">
+      <view class="text">
+        <text>王建</text>
+        <text>男</text>
+        <text>练习</text>
+      </view>
+    </view>
+  </view>

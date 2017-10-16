@@ -1,6 +1,6 @@
 <style lang = "less">
 .text {
-  font-size: 10ox;
+  font-size: 20px;
   display: flex;
   justify-content: center;
 }
