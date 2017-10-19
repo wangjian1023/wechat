@@ -81,8 +81,8 @@ export default class Index extends wepy.page {
   }
   data = {
     src: '',
-    color: 'black',
-    color1: 'red',
+    color: 'red',
+    color1: 'black',
     color2: 'black',
     color3: 'black',
     color4: 'black',

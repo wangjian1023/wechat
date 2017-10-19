@@ -34,7 +34,7 @@ export default class extends wepy.app {
     },
     tabBar: {
       borderStyle: 'gray',
-      backgroundColor: 'black',
+      backgroundColor: 'white',
       color: 'gray',
       selectedColor: 'gray',
       list: [{
@@ -46,8 +46,8 @@ export default class extends wepy.app {
       }, {
         pagePath: 'pages/collent',
         text: '我的',
-        iconPath: './image/我 的 (2).png',
-        selectedIconPath: './image/我.png'
+        iconPath: './image/我 (2).png',
+        selectedIconPath: './image/我 (3).png'
 
       }]
     }
