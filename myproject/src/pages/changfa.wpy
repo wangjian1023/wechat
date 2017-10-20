@@ -65,10 +65,24 @@
 }
 
 .background {
-  background-color: black;
+  background-color: #f4f5f7;
 }
 .margintop {
   margin-top: 0px;
+}
+.back {
+  background-image: url(http://img1.imgtn.bdimg.com/it/u=1556430450,1203462691&fm=27&gp=0.jpg);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  bottom: 0;
+}
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  color: transparent
 }
 </style>
 
@@ -254,10 +268,9 @@ export default class Index extends wepy.page {
       self.color3 = 'black'
     },
     d() {
-      self.color3 = 'gray'
-      self.color = 'black'
-      self.color1 = 'black'
-      self.color2 = 'black'
+      wepy.navigateTo({
+        url: '../pages/fair'
+      })
     }
   }
   onLoad() { }

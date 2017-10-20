@@ -1,6 +1,6 @@
 
   <view>
-    <view class="background">
+    <view class="background" style="height: {{height}}px; width: {{width}}px">
       <view class="text">
         <text class="size">男人流行发型指南攻略</text>
       </view>
@@ -39,11 +39,11 @@
 
       </view>
       <view class="empty">
-        <text/>
-      </view>
+          <text/>
+        </view>
 
-      <view class="bottom">
-        <text class="size">/MAN男人每天造型/</text>
+      <view class="bottom background">
+        <text class="size">/MAN男人造型邦/</text>
       </view>
     </view>
 

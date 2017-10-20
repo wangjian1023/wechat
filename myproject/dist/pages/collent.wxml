@@ -1,18 +1,23 @@
 
+<view> 
+<view class="background" style="height: {{height}}px; width: {{width}}px">
   <view>
-    <view class="back">
-        <view class="userinfo">
-          <image class="userinfo-avatar" src="{{avatarUrl}}" background-size="cover"/>
-          <view class="userinfo-nickname">{{nickname}}</view>
-        </view>
-        <view bindtap="a" class="text border">
-          <text>我的收藏</text>
-        </view>
-        <view bindtap="b" class="text border">
-          <text>用户反馈</text>
-        </view>
-        <view bindtap="c" class="text border">
-          <text>关于我们</text>
-        </view>    
+    <view class="yes"/>  
+    <view class="center">
+      <view class="userinfo cat">
+        <image class="userinfo-avatar" src="{{avatarUrl}}" background-size="cover"/>
+        <view class="userinfo-nickname">{{nickname}}</view>
+      </view>
+      <view bindtap="a" class="text get cat">
+        <text>我的收藏</text>
+      </view>
+      <view bindtap="b" class="text get mouse">
+        <text>用户反馈</text>
+      </view>
+      <view bindtap="c" class="get text mouse">
+        <text>关于我们</text>
+      </view>
     </view>
   </view>
+</view>
+</view>

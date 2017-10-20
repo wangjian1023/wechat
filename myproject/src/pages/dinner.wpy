@@ -1,6 +1,6 @@
 <style lang = "less">
 .text {
-  font-size: 20px;
+  font-size: 1.25rem;
   display: flex;
   justify-content: center;
 }
@@ -8,16 +8,17 @@
 .section {
   display: flex;
   align-items: center;
-  margin: 10px 15px;
+  margin: 0.625rem 0.935rem;
   border: 1px solid burlywood; //线高度颜色
-  border-radius: 10px;
+  border-radius: 0.935rem;
+  background-color: white;
 }
 
 .top {
   display: flex;
   justify-content: center;
   flex-direction: row;
-  margin-top: 40px;
+  margin-top: 2.5rem;
 }
 
 .mouse {
@@ -25,8 +26,8 @@
 }
 
 .photo {
-  height: 100px;
-  width: 150px;
+  height: 6.25rem;
+  width: 9.375rem;
   display: flex;
 }
 
@@ -41,9 +42,9 @@
   width: 100%;
   display: flex;
   justify-content: center;
-  font-size: 20px;
+  font-size: 1.25rem;
   background-color: white;
-  color: black;
+  color: #f4f5f7;
 }
 
 .cat {
@@ -52,32 +53,42 @@
   background-color: gray;
   align-items: center;
   justify-content: center;
-  height: 100px;
-  width: 150px;
+  height: 6.25rem;
+  width: 9.375rem;
 }
 
 .empty {
   height: 5rem;
   width: 12.5rem;
-  background-color: black;
+  background-color: #f4f5f7;
 }
 
 .background {
-  background-color: white;
+  background-color: #f4f5f7;
 }
 
 .size {
   color: gray;
-}white
+}
 
-.input {
+white .input {
   color: white;
+}
+
+.height {
+  display: flex;
+  width: 100%;
+}
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  color: transparent
 }
 </style>
 
 <template>
   <view>
-    <view class="background">
+    <view class="background" style="height: {{height}}px; width: {{width}}px">
       <view class="text">
         <text class="size">男人流行发型指南攻略</text>
       </view>
@@ -116,11 +127,11 @@
 
       </view>
       <view class="empty">
-        <text></text>
-      </view>
+          <text></text>
+        </view>
 
-      <view class="bottom">
-        <text class="size">/MAN男人每天造型/</text>
+      <view class="bottom background">
+        <text class="size">/MAN男人造型邦/</text>
       </view>
     </view>
 
@@ -136,9 +147,10 @@ export default class Index extends wepy.page {
   }
   data = {
     src: '',
-    fair1: '../image/中发界面.jpeg',
-    fair2: '../image/短发界面.jpg',
-    fair3: '../image/长发界面.jpg'
+    fair1: '../image/zhongfa.jpeg',
+    fair2: '../image/duanfa.jpg',
+    fair3: '../image/changfa.jpg',
+    height: ''
   }
   methods = {
     a() {
@@ -157,6 +169,14 @@ export default class Index extends wepy.page {
       })
     }
   }
-  onload() { }
+  onload() {
+    let self = this
+    wepy.getSystemInfo({
+      success(res) {
+        self.height = res.windowHeight
+        self.width = res.windowWidth
+      }
+    })
+  }
 }
 </script>

@@ -24,7 +24,8 @@ export default class extends wepy.app {
       'pages/index',
       'pages/feedback',
       'pages/love',
-      'pages/ours'
+      'pages/ours',
+      'pages/fair'
     ],
     window: {
       backgroundTextStyle: 'light',
@@ -41,7 +42,7 @@ export default class extends wepy.app {
         pagePath: 'pages/dinner',
         text: '首页',
         iconPath: './image/主页 (4).png',
-        selectedIconPath: './image/主页 (6).png'
+        selectedIconPath: './image/主页 (7).png'
 
       }, {
         pagePath: 'pages/collent',
