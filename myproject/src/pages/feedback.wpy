@@ -48,12 +48,7 @@
   width: 5rem;
   background-color: gray;
 }
-/* .cat {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-} */
- 
+
 </style>
 
 <template>

@@ -154,25 +154,6 @@ export default class Index extends wepy.page {
   }
   data = {
     src: '',
-    first: '../image/gexingzhatou.jpg',
-    like: '../image/diqiewanzi.jpeg',
-    finish: '../image/oumeiwanzitou.jpeg',
-    camera: '../image/oumeijuanfa.jpg',
-    ring: '../image/oumeichangjuan.jpg',
-    lipstrick: '../image/oumeichangjuan1.png',
-    flower: '../image/baisejuanfa.jpg',
-    elder: '../image/qingnianchangfa.jpg',
-    small: '../image/yazhoujuanfa.jpg',
-    loof: '../image/oumeijuanfa1.jpg',
-    wepy: '../image/oumiejuanfa3.jpg',
-    extends: '../image/dexingchannan.jpg',
-    star: '../image/五角星(2).png',
-    star1: '../image/五角星(1).png',
-    ax: '../image/gexingwanzi.jpg',
-    border: '../image/yazhougexing.jpg',
-    cdi: '../image/wanzhengwanzi.jpg',
-    define: '../image/nanshiwanzi.jpg',
-    default: '../image/nanshiwanzi.jpg',
     color: 'black',
     color1: 'black',
     color2: 'black',
@@ -189,14 +170,6 @@ export default class Index extends wepy.page {
   methods = {
     zuire() {
       let self = this
-      self.first = '../image/gexingzhatou.jpg'
-      self.like = '../image/diqiewanzi.jpeg'
-      self.finish = '../image/oumeiwanzitou.jpeg'
-      self.camera = '../image/oumeijuanfa.jpg'
-      self.ring = '../image/oumeichangjuan.jpg'
-      self.lipstrick = '../image/oumeichangjuan1.png'
-      self.flower = '../image/baisejuanfa.jpg'
-      self.elder = '../image/qingnianchangfa.jpg'
       self.wife = '欧美卷发'
       self.sister = '欧美长卷发'
       self.sister2 = '欧美长卷发'
@@ -211,17 +184,9 @@ export default class Index extends wepy.page {
     },
     wanzi() {
       let self = this
-      self.first = '../image/个性扎头.jpg'
-      self.like = '../image/底切丸子头.jpeg'
-      self.finish = '../image/欧美丸子头扎发.jpeg'
-      self.camera = '../image/个性丸子头.jpg'
-      self.ring = '../image/亚洲个性丸子头.jpg'
-      self.lipstrick = '../image/完整丸子头.png'
-      self.flower = '../image/男士丸子头.jpg'
-      self.elder = '../image/帅气扎发.png'
       this.wife = '个性丸子头'
       this.sister = '亚洲个性丸子头'
-      this.sister1 = '亚洲个性丸子头'
+      this.sister1 = '亚洲丸子头'
       this.mother = '完整丸子头'
       this.son = '男士丸子头'
       self.wepyy = '个性扎头'
@@ -233,14 +198,6 @@ export default class Index extends wepy.page {
     },
     c() {
       let self = this
-      self.first = '../image/欧美个性潮男.jpg'
-      self.like = '../image/欧美卷发3.jpg'
-      self.finish = '../image/亚洲卷发.jpg'
-      self.camera = '../image/欧美卷发.jpg'
-      self.ring = '../image/欧美长卷发.jpg'
-      self.lipstrick = '../image/欧美长卷发1.png'
-      self.flower = '../image/白色卷发.jpg'
-      self.elder = '../image/亚洲长卷发.jpg'
       self.wepy = '欧美个性潮男'
       self.sister = '欧美卷发'
       self.sister1 = '欧美长发'

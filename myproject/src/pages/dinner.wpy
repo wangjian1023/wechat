@@ -1,24 +1,24 @@
 <style lang = "less">
 .text {
-  font-size: 1.25rem;
+  font-size: 0.6rem;
   display: flex;
   justify-content: center;
 }
 
 .section {
   display: flex;
-  align-items: center;
-  margin: 0.625rem 0.935rem;
-  border: 1px solid burlywood; //线高度颜色
+  width: 80%;
+  justify-content: center;
+  border: 1px solid gray; //线高度颜色
   border-radius: 0.935rem;
   background-color: white;
+  margin-top: 1rem;
 }
-
 .top {
   display: flex;
   justify-content: center;
   flex-direction: row;
-  margin-top: 2.5rem;
+  margin-top: 1.5rem;
 }
 
 .mouse {
@@ -26,59 +26,66 @@
 }
 
 .photo {
-  height: 6.25rem;
-  width: 9.375rem;
+  height: 6rem;
+  width: 7.5rem;
   display: flex;
 }
 
 .suibian {
   display: flex;
   justify-content: center;
+  font-size: 25px;
 }
 
 .bottom {
-  position: fixed; //
-  bottom: 0;
+  position: absolute;
+  bottom: 1.5rem;
   width: 100%;
   display: flex;
   justify-content: center;
   font-size: 1.25rem;
-  background-color: white;
+  background-color: black;
   color: #f4f5f7;
 }
 
 .cat {
   display: flex;
   flex-direction: column;
-  background-color: gray;
+  background-color: white;
   align-items: center;
   justify-content: center;
-  height: 6.25rem;
-  width: 9.375rem;
+  height: 6rem;
+  width: 7.5rem;
 }
 
 .empty {
-  height: 5rem;
+  height: 4rem;
   width: 12.5rem;
-  background-color: #f4f5f7;
+  background-color: black;
 }
 
 .background {
-  background-color: #f4f5f7;
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  background-color: black;
 }
 
 .size {
   color: gray;
 }
 
-white .input {
-  color: white;
+.input {
+  width: 95%;
+  padding-left: 5px;
 }
 
 .height {
   display: flex;
   width: 100%;
 }
+
 ::-webkit-scrollbar {
   width: 0;
   height: 0;
@@ -87,13 +94,8 @@ white .input {
 </style>
 
 <template>
-  <view>
-    <view class="background" style="height: {{height}}px; width: {{width}}px">
-      <view class="text">
-        <text class="size">男人流行发型指南攻略</text>
-      </view>
-
-      <view>
+  <view class="background" style="height: {{height}}px; width: {{width}}px;">
+    <view class="background">
         <view class="section">
           <input placeholder="发型" focus="{{focus}}" config-type="search" class="input" />
         </view>
@@ -107,12 +109,12 @@ white .input {
           </view>
         </view>
         <view class="top mouse">
-          <view>
-            <image @tap="b" class="photo" src="{{fair2}}"></image>
-          </view>
-          <view @tap="b" class="cat">
+           <view @tap="b" class="cat">
             <text class="suibian">短发</text>
             <text class="text">SHORTHAIR</text>
+          </view>
+          <view>
+            <image @tap="b" class="photo" src="{{fair2}}"></image>
           </view>
         </view>
         <view class="top mouse">
@@ -124,12 +126,6 @@ white .input {
             <text class="text">LONGHAIR</text>
           </view>
         </view>
-
-      </view>
-      <view class="empty">
-          <text></text>
-        </view>
-
       <view class="bottom background">
         <text class="size">/MAN男人造型邦/</text>
       </view>
@@ -143,14 +139,15 @@ import wepy from 'wepy'
 
 export default class Index extends wepy.page {
   config = {
-    navigationBarTitleText: '男人的魅力'
+    navigationBarTitleText: '男人流行发型攻略指南'
   }
   data = {
     src: '',
-    fair1: '../image/zhongfa.jpeg',
-    fair2: '../image/duanfa.jpg',
-    fair3: '../image/changfa.jpg',
-    height: ''
+    fair1: 'http://img4.imgtn.bdimg.com/it/u=1188737727,1914995239&fm=27&gp=0.jpg',
+    fair2: 'http://img0.imgtn.bdimg.com/it/u=2715140892,3471146908&fm=27&gp=0.jpg',
+    fair3: 'http://img2.imgtn.bdimg.com/it/u=3270481591,2172396977&fm=27&gp=0.jpg',
+    height: '',
+    width: ''
   }
   methods = {
     a() {
@@ -169,7 +166,7 @@ export default class Index extends wepy.page {
       })
     }
   }
-  onload() {
+  onLoad() {
     let self = this
     wepy.getSystemInfo({
       success(res) {

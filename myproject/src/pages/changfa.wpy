@@ -30,6 +30,8 @@
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  font-size: 10px;
+  
 }
 
 .photo {
@@ -49,7 +51,6 @@
 .pop {
   display: flex;
   justify-content: center;
-  /* background-color: black; */
   margin-left: 10px;
   margin-right: 10px;
   margin-top: 30px;
@@ -65,7 +66,7 @@
 }
 
 .background {
-  background-color: #f4f5f7;
+  background-color: black;
 }
 .margintop {
   margin-top: 0px;
@@ -108,47 +109,68 @@
         <view class="photo">
           <image class="photo" src="{{first}}" />
           </view>
-        <!-- <view class="row "> -->
+         <view class="row ">
           <text class="text1">{{wepyy}}</text>
-          <!-- <image class="input" src="{{star}}" /> -->
-        <!-- </view> -->
+          <image class="input" @tap ="star" src="{{collect ? '../image/五角星 16.12.59.png' : star}}" />
+         </view>
       </view>
       <view class="column six">
         <image class="photo" src="{{like}}" />
+        <view class="row ">
         <text class="text1">{{direction}}</text>
+        <image class="input" @tap ="study" src="{{cat ? '../image/五角星 16.12.59.png' : ss}}" />
+      </view>
       </view>
     </view>
 
     <view class="pop">
       <view class="column six">
         <image class="photo" src="{{finish}}" />
+        <view class="row ">
         <text class="text1">{{from}}</text>
+         <image class="input" @tap ="sw" src="{{sa ? '../image/五角星 16.12.59.png' : sw}}" />
+      </view>
       </view>
       <view class="column six">
         <image class="photo" src="{{camera}}" />
+        <view class="row ">
         <text class="text1">{{wife}}</text>
+        <image class="input" @tap ="size" src="{{ab ? '../image/五角星 16.12.59.png' : size}}" />
+      </view>
       </view>
     </view>
 
     <view class="pop">
       <view class="column six">
         <image class="photo" src="{{ring}}" />
+         <view class="row ">
         <text class="text1">{{sister1}}</text>
+        <image class="input" @tap ="saction" src="{{find ? '../image/五角星 16.12.59.png' : saction}}" />
+      </view>
       </view>
       <view class="column six">
         <image class="photo" src="{{lipstrick}}" />
+        <view class="row ">
         <text class="text1">{{sister}}</text>
+        <image class="input" @tap ="clas" src="{{sun ? '../image/五角星 16.12.59.png' : class}}" />
+      </view>
       </view>
     </view>
 
     <view class="pop">
       <view class="column six">
         <image class="photo" src="{{flower}}" />
+        <view class="row ">
         <text class="text1">{{mother}}</text>
+        <image class="input" @tap ="sad" src="{{back ? '../image/五角星 16.12.59.png' : sad}}" />
+      </view>
       </view>
       <view class="column six">
         <image class="photo" src="{{elder}}" />
+        <view class="row ">
         <text class="text1">{{son}}</text>
+        <image class="input" @tap ="wonder" src="{{rain ? '../image/五角星 16.12.59.png' : wonder}}" />
+      </view>
       </view>
     </view>
 
@@ -164,26 +186,15 @@ export default class Index extends wepy.page {
   }
   data = {
     src: '',
-    first: '../image/个性扎头.jpg',
-    like: '../image/底切丸子头.jpeg',
-    finish: '../image/欧美丸子头扎发.jpeg',
-    camera: '../image/欧美卷发.jpg',
-    ring: '../image/欧美长卷发.jpg',
-    lipstrick: '../image/欧美长卷发1.png',
-    flower: '../image/白色卷发.jpg',
-    elder: '../image/青年长发.jpg',
-    small: '../image/亚洲卷发.jpg',
-    loof: '../image/欧美卷发1.jpg',
-    wepy: '../image/欧美卷发3.jpg',
-    extends: '../image/欧美个性潮男.jpg',
-    star: '../image/五角星(2).png',
-    star1: '../image/五角星(1).png',
-    ax: '../image/个性丸子头.jpg',
-    border: '../image/亚洲个性丸子头.jpg',
-    cdi: '../image/完整丸子头.jpg',
-    define: '../image/男士丸子头.jpg',
-    default: '../image/男士丸子头.jpg',
-    color: 'black',
+    first: 'https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=2248136626,1030735544&fm=27&gp=0.jpg',
+    like: 'https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=191331110,334727529&fm=27&gp=0.jpg',
+    finish: 'https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=2245832808,4216249531&fm=27&gp=0.jpg',
+    camera: 'https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=3177755555,1952344929&fm=27&gp=0.jpg',
+    ring: 'https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=106726230,250888099&fm=27&gp=0.jpg',
+    lipstrick: 'https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=3650225051,1797428698&fm=27&gp=0.jpg',
+    flower: 'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1508578005488&di=013280fd4f49182aae4b5c0d0ed5eae6&imgtype=0&src=http%3A%2F%2Fwww.nanshifaxing.com%2Fuploadfile%2F2014%2F1012%2F20141012114417901.jpg',
+    elder: 'data:image/jpeg;base64,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',
+    color: 'gray',
     color1: 'black',
     color2: 'black',
     color3: 'black',
@@ -191,28 +202,35 @@ export default class Index extends wepy.page {
     sister: '欧美长卷发',
     sister1: '欧美长卷发',
     mother: '白色卷发',
-    son: '白色卷发',
+    son: '亚洲潮男',
     wepyy: '个性头扎',
     direction: '底切丸子头',
-    from: '欧美丸子头扎发'
-
+    from: '欧美丸子头扎发',
+    star: '../image/五角星 (2).png',
+    ss: '../image/五角星 (2).png',
+    sw: '../image/五角星 (2).png',
+    size: '../image/五角星 (2).png',
+    saction: '../image/五角星 (2).png',
+    class: '../image/五角星 (2).png',
+    sad: '../image/五角星 (2).png',
+    wonder: '../image/五角星 (2).png'
   }
   methods = {
     zuire() {
       let self = this
-      self.first = '../image/个性扎头.jpg'
-      self.like = '../image/底切丸子头.jpeg'
-      self.finish = '../image/欧美丸子头扎发.jpeg'
-      self.camera = '../image/欧美卷发.jpg'
-      self.ring = '../image/欧美长卷发.jpg'
-      self.lipstrick = '../image/欧美长卷发1.png'
-      self.flower = '../image/白色卷发.jpg'
-      self.elder = '../image/青年长发.jpg'
+      self.first = 'https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=2248136626,1030735544&fm=27&gp=0.jpg'
+      self.like = 'https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=191331110,334727529&fm=27&gp=0.jpg'
+      self.finish = 'https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=2245832808,4216249531&fm=27&gp=0.jpg'
+      self.camera = 'https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=3177755555,1952344929&fm=27&gp=0.jpg'
+      self.ring = 'https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=106726230,250888099&fm=27&gp=0.jpg'
+      self.lipstrick = 'https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=3650225051,1797428698&fm=27&gp=0.jpg'
+      self.flower = 'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1508578005488&di=013280fd4f49182aae4b5c0d0ed5eae6&imgtype=0&src=http%3A%2F%2Fwww.nanshifaxing.com%2Fuploadfile%2F2014%2F1012%2F20141012114417901.jpg'
+      self.elder = 'data:image/jpeg;base64,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'
       self.wife = '欧美卷发'
       self.sister = '欧美长卷发'
       self.sister2 = '欧美长卷发'
       self.mother = '白色卷发'
-      self.son = '白色卷发'
+      self.son = '亚洲潮男'
       self.wepyy = '个性头扎'
       self.direction = '底切丸子头'
       self.from = '欧美丸子头扎发'
@@ -223,17 +241,17 @@ export default class Index extends wepy.page {
     },
     wanzi() {
       let self = this
-      self.first = '../image/个性扎头.jpg'
-      self.like = '../image/底切丸子头.jpeg'
-      self.finish = '../image/欧美丸子头扎发.jpeg'
-      self.camera = '../image/个性丸子头.jpg'
-      self.ring = '../image/亚洲个性丸子头.jpg'
-      self.lipstrick = '../image/完整丸子头.png'
-      self.flower = '../image/男士丸子头.jpg'
-      self.elder = '../image/帅气扎发.png'
+      self.first = 'https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=2248136626,1030735544&fm=27&gp=0.jpg'
+      self.like = 'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1508581661836&di=daff6a681c03b7f4c8f724fc3f63d042&imgtype=0&src=http%3A%2F%2Fi.dimg.cc%2F7b%2F2c%2F88%2Fc4%2Fc9%2Ff5%2F76%2F31%2F81%2F32%2F2d%2F4b%2F71%2F32%2F55%2Fc1.jpg'
+      self.finish = 'https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=3175307017,3528466161&fm=11&gp=0.jpg'
+      self.camera = 'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1508581749291&di=904b6b1ec23fa1189a6cba2ca0b7265f&imgtype=0&src=http%3A%2F%2Fimg.mp.itc.cn%2Fupload%2F20170513%2Fa211885bb6a242a29e98368f3cb6dc2b_th.jpg'
+      self.ring = 'https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=304758345,1559167794&fm=27&gp=0.jpg'
+      self.lipstrick = 'https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=2031877242,3650591778&fm=27&gp=0.jpg'
+      self.flower = 'https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=3094803913,2217321998&fm=27&gp=0.jpg'
+      self.elder = 'https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=1192136653,1913627551&fm=27&gp=0.jpg'
       this.wife = '个性丸子头'
       this.sister = '亚洲个性丸子头'
-      this.sister1 = '亚洲个性丸子头'
+      this.sister1 = '亚洲丸子头'
       this.mother = '完整丸子头'
       this.son = '男士丸子头'
       self.wepyy = '个性扎头'
@@ -241,19 +259,19 @@ export default class Index extends wepy.page {
       self.from = '欧美丸子头扎发'
       self.color1 = 'gray'
       self.color = 'black'
-      self.color3 = 'black'
       self.color2 = 'black'
+      self.color3 = 'black'
     },
     c() {
       let self = this
-      self.first = '../image/欧美个性潮男.jpg'
-      self.like = '../image/欧美卷发3.jpg'
-      self.finish = '../image/亚洲卷发.jpg'
-      self.camera = '../image/欧美卷发.jpg'
-      self.ring = '../image/欧美长卷发.jpg'
-      self.lipstrick = '../image/欧美长卷发1.png'
-      self.flower = '../image/白色卷发.jpg'
-      self.elder = '../image/亚洲长卷发.jpg'
+      self.first = 'https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=2248136626,1030735544&fm=27&gp=0.jpg'
+      self.like = 'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1508581661836&di=daff6a681c03b7f4c8f724fc3f63d042&imgtype=0&src=http%3A%2F%2Fi.dimg.cc%2F7b%2F2c%2F88%2Fc4%2Fc9%2Ff5%2F76%2F31%2F81%2F32%2F2d%2F4b%2F71%2F32%2F55%2Fc1.jpg'
+      self.finish = 'https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=3175307017,3528466161&fm=11&gp=0.jpg'
+      self.camera = 'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1508581749291&di=904b6b1ec23fa1189a6cba2ca0b7265f&imgtype=0&src=http%3A%2F%2Fimg.mp.itc.cn%2Fupload%2F20170513%2Fa211885bb6a242a29e98368f3cb6dc2b_th.jpg'
+      self.ring = 'https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=304758345,1559167794&fm=27&gp=0.jpg'
+      self.lipstrick = 'https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=2031877242,3650591778&fm=27&gp=0.jpg'
+      self.flower = 'https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=3094803913,2217321998&fm=27&gp=0.jpg'
+      self.elder = 'https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=1192136653,1913627551&fm=27&gp=0.jpg'
       self.wepy = '欧美个性潮男'
       self.sister = '欧美卷发'
       self.sister1 = '欧美长发'
@@ -268,9 +286,83 @@ export default class Index extends wepy.page {
       self.color3 = 'black'
     },
     d() {
-      wepy.navigateTo({
-        url: '../pages/fair'
-      })
+      let self = this
+      self.color3 = 'gray'
+      self.color = 'black'
+      self.color1 = 'black'
+      self.color2 = 'black'
+    },
+    star() {
+      let self = this
+      self.collect = !self.collect
+      if (self.collect) {
+        self.star = '../image/五角星 16.12.59.png'
+      } else {
+        self.star = '../image/五角星 (2).png'
+      }
+    },
+    study() {
+      let self = this
+      self.cat = !self.cat
+      if (self.cat) {
+        self.ss = '../image/五角星 16.12.59.png'
+      } else {
+        self.ss = '../image/五角星 (2).png'
+      }
+    },
+    sw() {
+      let self = this
+      self.sa = !self.sa
+      if (self.sa) {
+        self.sw = '../image/五角星 16.12.59.png'
+      } else {
+        self.sw = '../image/五角星 (2).png'
+      }
+    },
+    size() {
+      let self = this
+      self.ab = !self.ab
+      if (self.ab) {
+        self.size = '../image/五角星 16.12.59.png'
+      } else {
+        self.size = '../image/五角星 (2).png'
+      }
+    },
+    saction() {
+      let self = this
+      self.find = !self.find
+      if (self.find) {
+        self.saction = '../image/五角星 16.12.59.png'
+      } else {
+        self.saction = '../image/五角星 (2).png'
+      }
+    },
+    clas() {
+      let self = this
+      self.sun = !self.sun
+      if (self.sun) {
+        self.class = '../image/五角星 16.12.59.png'
+      } else {
+        self.class = '../image/五角星 (2).png'
+      }
+    },
+    sad() {
+      let self = this
+      self.back = !self.back
+      if (self.back) {
+        self.sad = '../image/五角星 16.12.59.png'
+      } else {
+        self.sad = '../image/五角星 (2).png'
+      }
+    },
+    wonder() {
+      let self = this
+      self.rain = !self.rain
+      if (self.rain) {
+        self.wonder = '../image/五角星 16.12.59.png'
+      } else {
+        self.wonder = '../image/五角星 (2).png'
+      }
     }
   }
   onLoad() { }

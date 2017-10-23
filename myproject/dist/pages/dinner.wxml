@@ -1,11 +1,6 @@
 
-  <view>
-    <view class="background" style="height: {{height}}px; width: {{width}}px">
-      <view class="text">
-        <text class="size">男人流行发型指南攻略</text>
-      </view>
-
-      <view>
+  <view class="background" style="height: {{height}}px; width: {{width}}px;">
+    <view class="background">
         <view class="section">
           <input placeholder="发型" focus="{{focus}}" config-type="search" class="input"/>
         </view>
@@ -19,12 +14,12 @@
           </view>
         </view>
         <view class="top mouse">
-          <view>
-            <image bindtap="b" class="photo" src="{{fair2}}"/>
-          </view>
-          <view bindtap="b" class="cat">
+           <view bindtap="b" class="cat">
             <text class="suibian">短发</text>
             <text class="text">SHORTHAIR</text>
+          </view>
+          <view>
+            <image bindtap="b" class="photo" src="{{fair2}}"/>
           </view>
         </view>
         <view class="top mouse">
@@ -36,12 +31,6 @@
             <text class="text">LONGHAIR</text>
           </view>
         </view>
-
-      </view>
-      <view class="empty">
-          <text/>
-        </view>
-
       <view class="bottom background">
         <text class="size">/MAN男人造型邦/</text>
       </view>
