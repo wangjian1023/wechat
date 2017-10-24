@@ -38,14 +38,15 @@
 }
 
 .bottom {
-  position: absolute;
-  bottom: 1.5rem;
+  /* position: absolute; */
+  bottom: 2rem;
   width: 100%;
   display: flex;
   justify-content: center;
   font-size: 1.25rem;
   background-color: black;
   color: #f4f5f7;
+  margin-top: 10px;
 }
 
 .cat {
@@ -74,6 +75,8 @@
 
 .size {
   color: gray;
+  margin-top: 15px;
+  font-size: 17px;
 }
 
 .input {

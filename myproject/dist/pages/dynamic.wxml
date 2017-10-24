@@ -10,4 +10,17 @@
         </block>
       </swiper>
     </view>
+    <view class="popularity">
+      <text>人气推荐</text>
+    </view>
+    <view class="find">
+      <view class="production">
+        <view bindtap="display" class="recommend"  wx:for="{{content}}" wx:key="index" id="{{index}}">
+          <text class="recName">{{item.recName}}</text>
+          <image class="recPhoto" src="{{item.recPhoto}}" mode="scaleToFill"/>
+        </view>
+      </view> 
+    </view>
+
+
   </view>

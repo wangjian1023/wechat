@@ -26,7 +26,8 @@ export default class extends wepy.app {
       'pages/love',
       'pages/ours',
       'pages/fair',
-      'pages/dynamic'
+      'pages/dynamic',
+      'pages/display'
     ],
     window: {
       backgroundTextStyle: 'light',

@@ -1,0 +1,71 @@
+<style>
+.name {
+  font-size: 30px;
+}
+.center {
+  display:flex;
+  flex-direction: column;
+}
+.find {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 20rpx;
+}
+
+.photo {
+height: 30px;
+width: 30px;
+}
+
+.image{
+  display: flex;
+  justify-content: center;
+  
+}
+.describe{
+  float: left;
+  font-size: 20px;
+  color: #6a6a6a;
+  margin: 20rpx;
+}
+
+</style>
+<template>
+  <view class = "center">
+    <view class = "find name">
+        <text>《{{recName}}》</text>
+    </view>
+    <view class = "describe">
+      <text space = "nbsp">{{describe}}</text>
+      </view>
+    <view class = "image">
+      <image src = '{{recPhoto}}' mode = 'widthFix'/>
+    </view>
+  </view>
+</template>
+
+<script>
+import wepy from 'wepy'
+export default class Show extends wepy.page {
+  config = {
+    navigationBarTitleText: ''
+  }
+  data = {
+    src: '',
+    recName: '',
+    recPhoto: '',
+    describe: ''
+  }
+  methods = {
+  }
+  onLoad(data) {
+    let self = this
+    self.recName = data.recName
+    self.recPhoto = data.recPhoto
+    self.describe = data.describe
+    console.log(self.recPhoto)
+  }
+}
+</script>
