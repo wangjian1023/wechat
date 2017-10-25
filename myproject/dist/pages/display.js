@@ -34,11 +34,11 @@ var Show = function (_wepy$page) {
     }
 
     return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = Show.__proto__ || Object.getPrototypeOf(Show)).call.apply(_ref, [this].concat(args))), _this), _this.config = {
-      navigationBarTitleText: ''
+      navigationBarTitleText: '男士流行发型指南攻略'
     }, _this.data = {
       src: '',
-      recName: '',
       recPhoto: '',
+      recName: '',
       describe: ''
     }, _this.methods = {}, _temp), _possibleConstructorReturn(_this, _ret);
   }
@@ -47,6 +47,7 @@ var Show = function (_wepy$page) {
     key: 'onLoad',
     value: function onLoad(data) {
       var self = this;
+      console.log(data);
       self.recName = data.recName;
       self.recPhoto = data.recPhoto;
       self.describe = data.describe;
@@ -60,4 +61,4 @@ var Show = function (_wepy$page) {
 
 Page(require('./../npm/wepy/lib/wepy.js').default.$createPage(Show , 'pages/display'));
 
-//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImRpc3BsYXkuanMiXSwibmFtZXMiOlsiU2hvdyIsImNvbmZpZyIsIm5hdmlnYXRpb25CYXJUaXRsZVRleHQiLCJkYXRhIiwic3JjIiwicmVjTmFtZSIsInJlY1Bob3RvIiwiZGVzY3JpYmUiLCJtZXRob2RzIiwic2VsZiIsImNvbnNvbGUiLCJsb2ciLCJwYWdlIl0sIm1hcHBpbmdzIjoiOzs7Ozs7Ozs7QUFDQTs7Ozs7Ozs7Ozs7O0lBQ3FCQSxJOzs7Ozs7Ozs7Ozs7OztrTEFDbkJDLE0sR0FBUztBQUNQQyw4QkFBd0I7QUFEakIsSyxRQUdUQyxJLEdBQU87QUFDTEMsV0FBSyxFQURBO0FBRUxDLGVBQVMsRUFGSjtBQUdMQyxnQkFBVSxFQUhMO0FBSUxDLGdCQUFVO0FBSkwsSyxRQU1QQyxPLEdBQVUsRTs7Ozs7MkJBRUhMLEksRUFBTTtBQUNYLFVBQUlNLE9BQU8sSUFBWDtBQUNBQSxXQUFLSixPQUFMLEdBQWVGLEtBQUtFLE9BQXBCO0FBQ0FJLFdBQUtILFFBQUwsR0FBZ0JILEtBQUtHLFFBQXJCO0FBQ0FHLFdBQUtGLFFBQUwsR0FBZ0JKLEtBQUtJLFFBQXJCO0FBQ0FHLGNBQVFDLEdBQVIsQ0FBWUYsS0FBS0gsUUFBakI7QUFDRDs7OztFQWxCK0IsZUFBS00sSTs7a0JBQWxCWixJIiwiZmlsZSI6ImRpc3BsYXkuanMiLCJzb3VyY2VzQ29udGVudCI6WyJcbmltcG9ydCB3ZXB5IGZyb20gJ3dlcHknXG5leHBvcnQgZGVmYXVsdCBjbGFzcyBTaG93IGV4dGVuZHMgd2VweS5wYWdlIHtcbiAgY29uZmlnID0ge1xuICAgIG5hdmlnYXRpb25CYXJUaXRsZVRleHQ6ICcnXG4gIH1cbiAgZGF0YSA9IHtcbiAgICBzcmM6ICcnLFxuICAgIHJlY05hbWU6ICcnLFxuICAgIHJlY1Bob3RvOiAnJyxcbiAgICBkZXNjcmliZTogJydcbiAgfVxuICBtZXRob2RzID0ge1xuICB9XG4gIG9uTG9hZChkYXRhKSB7XG4gICAgbGV0IHNlbGYgPSB0aGlzXG4gICAgc2VsZi5yZWNOYW1lID0gZGF0YS5yZWNOYW1lXG4gICAgc2VsZi5yZWNQaG90byA9IGRhdGEucmVjUGhvdG9cbiAgICBzZWxmLmRlc2NyaWJlID0gZGF0YS5kZXNjcmliZVxuICAgIGNvbnNvbGUubG9nKHNlbGYucmVjUGhvdG8pXG4gIH1cbn1cbiJdfQ==
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImRpc3BsYXkuanMiXSwibmFtZXMiOlsiU2hvdyIsImNvbmZpZyIsIm5hdmlnYXRpb25CYXJUaXRsZVRleHQiLCJkYXRhIiwic3JjIiwicmVjUGhvdG8iLCJyZWNOYW1lIiwiZGVzY3JpYmUiLCJtZXRob2RzIiwic2VsZiIsImNvbnNvbGUiLCJsb2ciLCJwYWdlIl0sIm1hcHBpbmdzIjoiOzs7Ozs7Ozs7QUFDQTs7Ozs7Ozs7Ozs7O0lBQ3FCQSxJOzs7Ozs7Ozs7Ozs7OztrTEFDbkJDLE0sR0FBUztBQUNQQyw4QkFBd0I7QUFEakIsSyxRQUdUQyxJLEdBQU87QUFDTEMsV0FBSyxFQURBO0FBRUxDLGdCQUFVLEVBRkw7QUFHTEMsZUFBUyxFQUhKO0FBSUxDLGdCQUFVO0FBSkwsSyxRQU1QQyxPLEdBQVUsRTs7Ozs7MkJBRUhMLEksRUFBTTtBQUNYLFVBQUlNLE9BQU8sSUFBWDtBQUNBQyxjQUFRQyxHQUFSLENBQVlSLElBQVo7QUFDQU0sV0FBS0gsT0FBTCxHQUFlSCxLQUFLRyxPQUFwQjtBQUNBRyxXQUFLSixRQUFMLEdBQWdCRixLQUFLRSxRQUFyQjtBQUNBSSxXQUFLRixRQUFMLEdBQWdCSixLQUFLSSxRQUFyQjtBQUNBRyxjQUFRQyxHQUFSLENBQVlGLEtBQUtKLFFBQWpCO0FBQ0Q7Ozs7RUFuQitCLGVBQUtPLEk7O2tCQUFsQlosSSIsImZpbGUiOiJkaXNwbGF5LmpzIiwic291cmNlc0NvbnRlbnQiOlsiXG5pbXBvcnQgd2VweSBmcm9tICd3ZXB5J1xuZXhwb3J0IGRlZmF1bHQgY2xhc3MgU2hvdyBleHRlbmRzIHdlcHkucGFnZSB7XG4gIGNvbmZpZyA9IHtcbiAgICBuYXZpZ2F0aW9uQmFyVGl0bGVUZXh0OiAn55S35aOr5rWB6KGM5Y+R5Z6L5oyH5Y2X5pS755WlJ1xuICB9XG4gIGRhdGEgPSB7XG4gICAgc3JjOiAnJyxcbiAgICByZWNQaG90bzogJycsXG4gICAgcmVjTmFtZTogJycsXG4gICAgZGVzY3JpYmU6ICcnXG4gIH1cbiAgbWV0aG9kcyA9IHtcbiAgfVxuICBvbkxvYWQoZGF0YSkge1xuICAgIGxldCBzZWxmID0gdGhpc1xuICAgIGNvbnNvbGUubG9nKGRhdGEpXG4gICAgc2VsZi5yZWNOYW1lID0gZGF0YS5yZWNOYW1lXG4gICAgc2VsZi5yZWNQaG90byA9IGRhdGEucmVjUGhvdG9cbiAgICBzZWxmLmRlc2NyaWJlID0gZGF0YS5kZXNjcmliZVxuICAgIGNvbnNvbGUubG9nKHNlbGYucmVjUGhvdG8pXG4gIH1cbn1cbiJdfQ==

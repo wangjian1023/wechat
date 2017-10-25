@@ -44,15 +44,15 @@
   display: flex;
   justify-content: center;
   font-size: 1.25rem;
-  background-color: black;
-  color: #f4f5f7;
+  background-color: #202020;
+  color: #F8F8F8;
   margin-top: 10px;
 }
 
 .cat {
   display: flex;
   flex-direction: column;
-  background-color: white;
+  background-color: #E0E0E0;
   align-items: center;
   justify-content: center;
   height: 6rem;
@@ -62,7 +62,7 @@
 .empty {
   height: 4rem;
   width: 12.5rem;
-  background-color: black;
+  background-color: #282828;
 }
 
 .background {
@@ -70,7 +70,7 @@
   width: 100%;
   flex-direction: column;
   align-items: center;
-  background-color: black;
+  background-color: #181818;
 }
 
 .size {

@@ -21,7 +21,7 @@
   width: 100px;
 }
 
-.popularity {
+.text {
   color: #918d8d;
   margin-top: 6px;
   display: flex;
@@ -43,12 +43,12 @@
 
 .recommend {
   display: flex;
-  flex-basis: column;
+  flex-direction: column;
   justify-content: center;
   align-content: center;
 }
 
-.production {
+.product {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -56,6 +56,14 @@
 
 }
 
+.background {
+  background-color: #FDF5E6;
+  
+}
 
-
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  color: transparent
+}
 

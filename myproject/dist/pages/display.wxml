@@ -1,12 +1,12 @@
 
-  <view class="center">
-    <view class="find name">
-        <text>《{{recName}}》</text>
+  <view class="button">
+    <view class="text">
+      <text>{{recName}}</text>
+    </view>
+    <view class="photo">
+      <image src="{{recPhoto}}" mode="widthFix"/>
     </view>
     <view class="describe">
       <text space="nbsp">{{describe}}</text>
       </view>
-    <view class="image">
-      <image src="{{recPhoto}}" mode="widthFix"/>
-    </view>
   </view>

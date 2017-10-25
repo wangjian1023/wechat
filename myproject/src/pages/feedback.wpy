@@ -1,6 +1,6 @@
 <style lang = "less">
 .back {
-  background-image: url(http://img1.imgtn.bdimg.com/it/u=1556430450,1203462691&fm=27&gp=0.jpg);
+  background-image: url(http://mpic.tiankong.com/edf/bd9/edfbd9f83046502049f2026bbb46294e/640.jpg@300h);
   background-repeat: no-repeat;
   background-size: 100% 100%;
   position: fixed;
@@ -17,7 +17,8 @@
   align-items: center; */
   margin-top: 40px;
   margin-right: 10px;
-  border: 5px solid black;
+  border: 2px solid gray;
+  color: #CCCCFF;
 }
 
 .backer {
@@ -25,6 +26,7 @@
   justify-content: center;
   align-items: center;
   margin-top: 1rem;
+  text-decoration: underline black; 
 }
 
 .column {
@@ -57,8 +59,8 @@
       <view class="marginleft">
         <text>意见反馈</text>
       </view>
-      <view class="backer" @tap = "border">
-        <textarea class="border"></textarea>
+      <view class="backer" style="maxlength:10;" @tap = "border">
+        <textarea space = "nbsp" maxlength = "140" class="border"></textarea>
       </view>
       <view class="backer">
         <botton class="bottom">提交</botton>

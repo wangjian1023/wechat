@@ -1,7 +1,7 @@
 
   <view class="background">
 
-    <view class="row">
+    <view class="row1">
       <view class="border" style="border: 1px solid {{color}};">
         <text bindtap="zuire" class="text">最热</text>
       </view>
@@ -17,13 +17,11 @@
     </view>
     <view class="pop">
       <view class="column six">
-        <view class="photo">
-          <image class="photo" src="{{first}}"/>
-          </view>
-         <view class="row ">
-          <text class="text1">{{wepyy}}</text>
-          <image class="input" bindtap="star" src="{{collect ? '../image/五角星 16.12.59.png' : star}}"/>
-         </view>
+        <image class="photo" src="{{first}}"/>
+        <view class="row ">
+        <text class="text1">{{wepyy}}</text>
+         <image class="input" bindtap="star" src="{{collect ? '../image/五角星 16.12.59.png' : star}}"/>
+      </view>
       </view>
       <view class="column six">
         <image class="photo" src="{{like}}"/>

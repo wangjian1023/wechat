@@ -1,29 +1,26 @@
 <style>
-.name {
+.text {
   font-size: 30px;
+  justify-content: center;
+  color: gray;
+  margin-top: 25px;
 }
-.center {
-  display:flex;
-  flex-direction: column;
-}
-.find {
+button {
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  margin: 20rpx;
+  justify-content: center;
+  align-content: center;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  
 }
 
 .photo {
-height: 30px;
-width: 30px;
+  display: flex;
+  height: 50px;
+  width: 80%;
+  justify-content: center;
 }
 
-.image{
-  display: flex;
-  justify-content: center;
-  
-}
 .describe{
   float: left;
   font-size: 20px;
@@ -33,16 +30,16 @@ width: 30px;
 
 </style>
 <template>
-  <view class = "center">
-    <view class = "find name">
-        <text>《{{recName}}》</text>
+  <view class = "button" >
+    <view class="text">
+      <text>{{recName}}</text>
+    </view>
+    <view class = "photo">
+      <image src = "{{recPhoto}}" mode = "widthFix"/>
     </view>
     <view class = "describe">
       <text space = "nbsp">{{describe}}</text>
       </view>
-    <view class = "image">
-      <image src = '{{recPhoto}}' mode = 'widthFix'/>
-    </view>
   </view>
 </template>
 
@@ -50,18 +47,19 @@ width: 30px;
 import wepy from 'wepy'
 export default class Show extends wepy.page {
   config = {
-    navigationBarTitleText: ''
+    navigationBarTitleText: '男士流行发型指南攻略'
   }
   data = {
     src: '',
-    recName: '',
     recPhoto: '',
+    recName: '',
     describe: ''
   }
   methods = {
   }
   onLoad(data) {
     let self = this
+    console.log(data)
     self.recName = data.recName
     self.recPhoto = data.recPhoto
     self.describe = data.describe

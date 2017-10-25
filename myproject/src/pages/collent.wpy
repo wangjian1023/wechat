@@ -30,7 +30,6 @@
 .text {
   font-size: 20px;
   color: gray;
-  align-items: center;
 }
 
 .background {
@@ -73,9 +72,24 @@
   ;
 }
 .mouse {
-  display: flex;
   margin-top: 10px;
-}  
+}
+
+.photo {
+  display: flex;
+  height: 25px;
+  width: 25px;
+  align-content: center;
+  padding: 5px;
+
+}
+
+.back {
+  display: flex;
+  justify-content: flex-end;
+
+  
+}
 </style>
 
 <template>
@@ -88,14 +102,30 @@
         <image class="userinfo-avatar" src="{{avatarUrl}}" background-size="cover" />
         <view class="userinfo-nickname">{{nickname}}</view>
       </view>
+
       <view @tap="a" class="text get cat">
+        <image class="photo" src="{{product}}"></image>
         <text>我的收藏</text>
+        <text>></text>
       </view>
+
       <view @tap="b" class="text get mouse">
-        <text>用户反馈</text>
+        <view>
+          <image class="photo" src="{{tickling}}"></image>
+        </view>
+        <view>
+          <text>用户反馈</text>
+          <text>></text>
+        </view>
       </view>
       <view @tap="c" class="get text mouse">
-        <text>关于我们</text>
+        <view>
+            <image class="photo" src="{{developer}}"></image>
+          </view>
+        <view>
+          <text>关于我们</text>
+          <text>></text>
+        </view>
       </view>
     </view>
   </view>
@@ -108,13 +138,16 @@ import wepy from 'wepy'
 
 export default class Index extends wepy.page {
   config = {
-    navigationBarTitleText: '男人的魅力'
+    navigationBarTitleText: '男人流行发型指南攻略'
   }
   data = {
     src: '',
     avatarUrl: '',
     nickname: '',
-    height: 0
+    height: 0,
+    developer: '../image/developer.png',
+    product: '../image/product.png',
+    tickling: '../image/tickling.png'
   }
 
   methods = {

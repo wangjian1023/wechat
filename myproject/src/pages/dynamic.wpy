@@ -21,7 +21,7 @@
   width: 100px;
 }
 
-.popularity {
+.text {
   color: #918d8d;
   margin-top: 6px;
   display: flex;
@@ -43,12 +43,12 @@
 
 .recommend {
   display: flex;
-  flex-basis: column;
+  flex-direction: column;
   justify-content: center;
   align-content: center;
 }
 
-.production {
+.product {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -56,13 +56,21 @@
 
 }
 
+.background {
+  background-color: #FDF5E6;
+  
+}
 
-
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  color: transparent
+}
 
 </style>
 <template>
 
-  <view>
+  <scroll-view scroll-y class="background" style="height: {{height}}px; width: {{width}}px;">
     <view class='swiper' >
       <swiper class='slide-image' autoplay='true' indicator-dots="{{indicatorDots}}" indicator-color = "{{color}}" indicator-active-color = "{{color1}}" interval='3000' duration='1000' circular='true' current='{{}}'>
         <block wx:for='{{imgUrls}}' wx:key='index'>
@@ -72,20 +80,18 @@
         </block>
       </swiper>
     </view>
-    <view class = "popularity">
-      <text>人气推荐</text>
+    <view class = "text">
+      <text>热门消息</text>
     </view>
-    <view class="find">
-      <view class= "production">
-        <view  @tap = "display" class="recommend" wx:for="{{content}}" wx:key="index" id="{{index}}">
-          <text class="recName">{{item.recName}}</text>
+    <view class="find product">
+        <view  @tap = "display" class="recommend " wx:for="{{content}}" wx:key="index" id="{{index}}">
           <image class="recPhoto" src="{{item.recPhoto}}" mode="scaleToFill" />
+          <text class="recName">{{item.recName}}</text>
         </view>
-      </view> 
     </view>
 
 
-  </view>
+  </scroll-view>
 </template>
 
 <script>
@@ -108,26 +114,29 @@ export default class Homepage extends wepy.page {
     content: null,
     indicatorDots: true,
     color: 'white',
-    color1: 'gray'
+    color1: 'gray',
+    height: '',
+    width: 0
   }
   methods = {
-    recTap(e) {
+    display(e) {
       let self = this
       let item = self.content[e.currentTarget.id]
-      console.log(e)
+      console.log(item)
       wepy.navigateTo({
-        url: `./show?recName=${item.recName}&recPhoto=${item.recPhoto}&describe=${item.describe}`
-      })
-    },
-    display() {
-      wepy.navigateTo({
-        url: '../pages/display'
+        url: `./display?recPhoto=${item.recPhoto}&recName=${item.recName}&describe=${item.describe}`
       })
     }
   }
   onLoad() {
     let self = this
     self.content = skip
+    wepy.getSystemInfo({
+      success(res) {
+        self.height = res.windowHeight
+        self.width = res.windowWidth
+      }
+    })
   }
 }
 </script>
