@@ -1,1 +1,1 @@
-.text{display:flex;font-size:25px;flex-direction:column;color:gray}.back{background-image:url(http://img1.imgtn.bdimg.com/it/u=1556430450,1203462691&fm=27&gp=0.jpg);background-repeat:no-repeat;background-size:100% 100%;position:fixed;width:100%;height:100%;bottom:0}
+.text{display:flex;font-size:25px;flex-direction:column;color:gray}.back{background-image:url(http://mpic.tiankong.com/c20/b5f/c20b5f23444d84dd25c7072b51add2e0/640.jpg@300h);background-repeat:no-repeat;background-size:100% 100%;position:fixed;width:100%;height:100%;bottom:0}

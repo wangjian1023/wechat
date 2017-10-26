@@ -1,6 +1,6 @@
 <style lang = "less">
 .back {
-  background-image: url(http://img1.imgtn.bdimg.com/it/u=1556430450,1203462691&fm=27&gp=0.jpg);
+  background-image: url(http://mpic.tiankong.com/936/0f4/9360f42f3addd53bd65d3e5bc67b1014/640.jpg@300h);
   background-repeat: no-repeat;
   background-size: 100% 100%;
   position: fixed;
@@ -21,7 +21,7 @@ import wepy from 'wepy'
 
 export default class Index extends wepy.page {
   config = {
-    navigationBarTitleText: '男人的魅力'
+    navigationBarTitleText: '男士流行发型指南攻略'
   }
   data = {
 

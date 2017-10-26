@@ -1,1 +1,1 @@
-.border{display:flex;flex-direction:row;height:1rem;width:4rem;border-radius:1rem;margin:1rem}.row{display:flex;flex-direction:row;width:100%}.text{display:flex;font-size:.7rem;justify-content:center;align-items:center;color:gray;height:1rem;width:3rem}
+.border{display:flex;flex-direction:row;height:1rem;width:4rem;border-radius:1rem;margin:1rem}.row{display:flex;flex-direction:row;width:100%}.text{display:flex;font-size:.7rem;justify-content:center;align-items:center;color:gray;height:1rem;width:3rem}.background{background-color:#303030}

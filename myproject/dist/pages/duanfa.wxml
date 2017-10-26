@@ -1,7 +1,7 @@
 
   <view class="background">
 
-    <view class="row">
+    <view class="row1">
       <view class="border" style="border: 1px solid {{color}};">
         <text bindtap="zuire" class="text">最热</text>
       </view>
@@ -11,53 +11,75 @@
       <view class="border" style="border: 1px solid {{color2}};">
         <text bindtap="c" class="text">寸头</text>
       </view>
+      <view class="border" style="border: 1px solid {{color3}};">
+        <text bindtap="d" class="text">碎发</text>
+      </view>
     </view>
     <view class="pop">
       <view class="column six">
-        <view class="photo">
-          <image class="photo" src="{{first}}"/>
-        </view>
-        <!-- <view class="row "> -->
+        <image class="photo" src="{{first}}"/>
+        <view class="row ">
         <text class="text1">{{wepyy}}</text>
-        <!-- <image class="input" src="{{star}}" /> -->
-        <!-- </view> -->
+         <image class="input" bindtap="star" src="{{collect ? '../image/star2.png' : star}}"/>
+      </view>
       </view>
       <view class="column six">
         <image class="photo" src="{{like}}"/>
+        <view class="row ">
         <text class="text1">{{direction}}</text>
+        <image class="input" bindtap="study" src="{{cat ? '../image/star2.png' : ss}}"/>
+      </view>
       </view>
     </view>
 
     <view class="pop">
       <view class="column six">
         <image class="photo" src="{{finish}}"/>
+        <view class="row ">
         <text class="text1">{{from}}</text>
+         <image class="input" bindtap="sw" src="{{sa ? '../image/star2.png' : sw}}"/>
+      </view>
       </view>
       <view class="column six">
         <image class="photo" src="{{camera}}"/>
+        <view class="row ">
         <text class="text1">{{wife}}</text>
+        <image class="input" bindtap="size" src="{{ab ? '../image/star2.png' : size}}"/>
+      </view>
       </view>
     </view>
 
     <view class="pop">
       <view class="column six">
         <image class="photo" src="{{ring}}"/>
+         <view class="row ">
         <text class="text1">{{sister1}}</text>
+        <image class="input" bindtap="saction" src="{{find ? '../image/star2.png' : saction}}"/>
+      </view>
       </view>
       <view class="column six">
         <image class="photo" src="{{lipstrick}}"/>
+        <view class="row ">
         <text class="text1">{{sister}}</text>
+        <image class="input" bindtap="clas" src="{{sun ? '../image/star2.png' : class}}"/>
+      </view>
       </view>
     </view>
 
     <view class="pop">
       <view class="column six">
         <image class="photo" src="{{flower}}"/>
+        <view class="row ">
         <text class="text1">{{mother}}</text>
+        <image class="input" bindtap="sad" src="{{back ? '../image/star2.png' : sad}}"/>
+      </view>
       </view>
       <view class="column six">
         <image class="photo" src="{{elder}}"/>
+        <view class="row ">
         <text class="text1">{{son}}</text>
+        <image class="input" bindtap="wonder" src="{{rain ? '../image/star2.png' : wonder}}"/>
+      </view>
       </view>
     </view>
 

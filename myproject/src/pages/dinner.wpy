@@ -142,7 +142,7 @@ import wepy from 'wepy'
 
 export default class Index extends wepy.page {
   config = {
-    navigationBarTitleText: '男人流行发型攻略指南'
+    navigationBarTitleText: '男士流行发型攻略指南'
   }
   data = {
     src: '',

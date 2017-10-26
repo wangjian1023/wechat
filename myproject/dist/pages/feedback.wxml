@@ -4,7 +4,7 @@
       <view class="marginleft">
         <text>意见反馈</text>
       </view>
-      <view class="backer" style="maxlength:10;" bindtap="border">
+      <view class="backer" style="maxlength" bindtap="border">
         <textarea space="nbsp" maxlength="140" class="border"/>
       </view>
       <view class="backer">

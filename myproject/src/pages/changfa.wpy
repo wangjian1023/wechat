@@ -2,8 +2,8 @@
 .border {
   display: flex;
   flex-direction: row;
-  height: 1.2rem;
-  width: 2.7rem;
+  height: 1.6rem;
+  width: 4rem;
   border-radius: 1rem;
   justify-content: center;
   align-items: center;
@@ -12,9 +12,9 @@
 
 .text {
   display: flex;
-  font-size: 15px;
   justify-content: center;
   color: white;
+  font-size: 15px;
 }
 
 .text1 {
@@ -59,9 +59,11 @@
 
 .pop {
   display: flex;
+  /* flex-direction: column; */
   justify-content: center;
-  margin-left: 10px;
-  margin-right: 10px;
+  align-items: center;
+  margin-left: 25px;
+  margin-right: 25px;
   margin-top: 20px;
   justify-content: space-between;
 }
@@ -69,6 +71,7 @@
 .six {
   display: flex;
   justify-content: center;
+  align-items: center;
   height: 200px;
   width: 190px;
   flex-wrap: nowrap;
@@ -81,15 +84,7 @@
 .margintop {
   margin-top: 0px;
 }
-.back {
-  background-image: url(http://img1.imgtn.bdimg.com/it/u=1556430450,1203462691&fm=27&gp=0.jpg);
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  bottom: 0;
-}
+
 ::-webkit-scrollbar {
   width: 0;
   height: 0;
@@ -119,14 +114,14 @@
         <image class="photo" src="{{first}}" />
         <view class="row ">
         <text class="text1">{{wepyy}}</text>
-         <image class="input" @tap ="star" src="{{collect ? '../image/五角星 16.12.59.png' : star}}" />
+         <image class="input" @tap ="star" src="{{collect ? '../image/star2.png' : star}}" />
       </view>
       </view>
       <view class="column six">
         <image class="photo" src="{{like}}" />
         <view class="row ">
         <text class="text1">{{direction}}</text>
-        <image class="input" @tap ="study" src="{{cat ? '../image/五角星 16.12.59.png' : ss}}" />
+        <image class="input" @tap ="study" src="{{cat ? '../image/star2.png' : ss}}" />
       </view>
       </view>
     </view>
@@ -136,14 +131,14 @@
         <image class="photo" src="{{finish}}" />
         <view class="row ">
         <text class="text1">{{from}}</text>
-         <image class="input" @tap ="sw" src="{{sa ? '../image/五角星 16.12.59.png' : sw}}" />
+         <image class="input" @tap ="sw" src="{{sa ? '../image/star2.png' : sw}}" />
       </view>
       </view>
       <view class="column six">
         <image class="photo" src="{{camera}}" />
         <view class="row ">
         <text class="text1">{{wife}}</text>
-        <image class="input" @tap ="size" src="{{ab ? '../image/五角星 16.12.59.png' : size}}" />
+        <image class="input" @tap ="size" src="{{ab ? '../image/star2.png' : size}}" />
       </view>
       </view>
     </view>
@@ -153,14 +148,14 @@
         <image class="photo" src="{{ring}}" />
          <view class="row ">
         <text class="text1">{{sister1}}</text>
-        <image class="input" @tap ="saction" src="{{find ? '../image/五角星 16.12.59.png' : saction}}" />
+        <image class="input" @tap ="saction" src="{{find ? '../image/star2.png' : saction}}" />
       </view>
       </view>
       <view class="column six">
         <image class="photo" src="{{lipstrick}}" />
         <view class="row ">
         <text class="text1">{{sister}}</text>
-        <image class="input" @tap ="clas" src="{{sun ? '../image/五角星 16.12.59.png' : class}}" />
+        <image class="input" @tap ="clas" src="{{sun ? '../image/star2.png' : class}}" />
       </view>
       </view>
     </view>
@@ -170,14 +165,14 @@
         <image class="photo" src="{{flower}}" />
         <view class="row ">
         <text class="text1">{{mother}}</text>
-        <image class="input" @tap ="sad" src="{{back ? '../image/五角星 16.12.59.png' : sad}}" />
+        <image class="input" @tap ="sad" src="{{back ? '../image/star2.png' : sad}}" />
       </view>
       </view>
       <view class="column six">
         <image class="photo" src="{{elder}}" />
         <view class="row ">
         <text class="text1">{{son}}</text>
-        <image class="input" @tap ="wonder" src="{{rain ? '../image/五角星 16.12.59.png' : wonder}}" />
+        <image class="input" @tap ="wonder" src="{{rain ? '../image/star2.png' : wonder}}" />
       </view>
       </view>
     </view>
@@ -190,7 +185,7 @@ import wepy from 'wepy'
 
 export default class Index extends wepy.page {
   config = {
-    navigationBarTitleText: '男人流行发型指南攻略'
+    navigationBarTitleText: '男士流行发型指南攻略'
   }
   data = {
     src: '',
@@ -214,14 +209,14 @@ export default class Index extends wepy.page {
     wepyy: '个性头扎',
     direction: '底切丸子头',
     from: '欧美丸子头扎发',
-    star: '../image/五角星 (2).png',
-    ss: '../image/五角星 (2).png',
-    sw: '../image/五角星 (2).png',
-    size: '../image/五角星 (2).png',
-    saction: '../image/五角星 (2).png',
-    class: '../image/五角星 (2).png',
-    sad: '../image/五角星 (2).png',
-    wonder: '../image/五角星 (2).png'
+    star: '../image/star1.png',
+    ss: '../image/star1.png',
+    sw: '../image/star1.png',
+    size: '../image/star1.png',
+    saction: '../image/star1.png',
+    class: '../image/star1.png',
+    sad: '../image/star1.png',
+    wonder: '../image/star1.png'
   }
   methods = {
     zuire() {
@@ -256,7 +251,7 @@ export default class Index extends wepy.page {
       self.ring = 'https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=304758345,1559167794&fm=27&gp=0.jpg'
       self.lipstrick = 'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1508934077587&di=663c25de6bbebec59ab9dd33fac53430&imgtype=0&src=http%3A%2F%2Fwww.tk-yy.com%2Fu%2F38%2FT1aFTuXdliXXajprDX_114341.jpg'
       self.flower = 'https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=3094803913,2217321998&fm=27&gp=0.jpg'
-      self.elder = 'https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=1192136653,1913627551&fm=27&gp=0.jpg'
+      self.elder = 'http://img5.imgtn.bdimg.com/it/u=3648419640,357090713&fm=27&gp=0.jpg'
       this.wife = '个性丸子头'
       this.sister = '亚洲个性丸子头'
       this.sister1 = '亚洲丸子头'
@@ -275,7 +270,7 @@ export default class Index extends wepy.page {
       self.first = 'https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=1057438108,2870952906&fm=27&gp=0.jpg'
       self.like = 'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1508581661836&di=daff6a681c03b7f4c8f724fc3f63d042&imgtype=0&src=http%3A%2F%2Fi.dimg.cc%2F7b%2F2c%2F88%2Fc4%2Fc9%2Ff5%2F76%2F31%2F81%2F32%2F2d%2F4b%2F71%2F32%2F55%2Fc1.jpg'
       self.finish = 'https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=3175307017,3528466161&fm=11&gp=0.jpg'
-      self.camera = 'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1508581749291&di=904b6b1ec23fa1189a6cba2ca0b7265f&imgtype=0&src=http%3A%2F%2Fimg.mp.itc.cn%2Fupload%2F20170513%2Fa211885bb6a242a29e98368f3cb6dc2b_th.jpg'
+      self.camera = 'http://img2.imgtn.bdimg.com/it/u=1848146761,583022029&fm=27&gp=0.jpg'
       self.ring = 'https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=304758345,1559167794&fm=27&gp=0.jpg'
       self.lipstrick = 'https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=3109570249,4272194125&fm=27&gp=0.jpg'
       self.flower = 'https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=3094803913,2217321998&fm=27&gp=0.jpg'
@@ -320,72 +315,72 @@ export default class Index extends wepy.page {
       let self = this
       self.collect = !self.collect
       if (self.collect) {
-        self.star = '../image/五角星 16.12.59.png'
+        self.star = '../image/star2.png'
       } else {
-        self.star = '../image/五角星 (2).png'
+        self.star = '../image/star1.png'
       }
     },
     study() {
       let self = this
       self.cat = !self.cat
       if (self.cat) {
-        self.ss = '../image/五角星 16.12.59.png'
+        self.ss = '../image/star2.png'
       } else {
-        self.ss = '../image/五角星 (2).png'
+        self.ss = '../image/star1.png'
       }
     },
     sw() {
       let self = this
       self.sa = !self.sa
       if (self.sa) {
-        self.sw = '../image/五角星 16.12.59.png'
+        self.sw = '../image/star2.png'
       } else {
-        self.sw = '../image/五角星 (2).png'
+        self.sw = '../image/star1.png'
       }
     },
     size() {
       let self = this
       self.ab = !self.ab
       if (self.ab) {
-        self.size = '../image/五角星 16.12.59.png'
+        self.size = '../image/star2.png'
       } else {
-        self.size = '../image/五角星 (2).png'
+        self.size = '../image/star1.png'
       }
     },
     saction() {
       let self = this
       self.find = !self.find
       if (self.find) {
-        self.saction = '../image/五角星 16.12.59.png'
+        self.saction = '../image/star2.png'
       } else {
-        self.saction = '../image/五角星 (2).png'
+        self.saction = '../image/star1.png'
       }
     },
     clas() {
       let self = this
       self.sun = !self.sun
       if (self.sun) {
-        self.class = '../image/五角星 16.12.59.png'
+        self.class = '../image/star2.png'
       } else {
-        self.class = '../image/五角星 (2).png'
+        self.class = '../image/star1.png'
       }
     },
     sad() {
       let self = this
       self.back = !self.back
       if (self.back) {
-        self.sad = '../image/五角星 16.12.59.png'
+        self.sad = '../image/star2.png'
       } else {
-        self.sad = '../image/五角星 (2).png'
+        self.sad = '../image/star1.png'
       }
     },
     wonder() {
       let self = this
       self.rain = !self.rain
       if (self.rain) {
-        self.wonder = '../image/五角星 16.12.59.png'
+        self.wonder = '../image/star2.png'
       } else {
-        self.wonder = '../image/五角星 (2).png'
+        self.wonder = '../image/star1.png'
       }
     }
   }

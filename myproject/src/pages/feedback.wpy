@@ -13,10 +13,7 @@
   display: flex;
   height: 200px;
   width: 300px;
-  /* justify-content: center;
-  align-items: center; */
   margin-top: 40px;
-  margin-right: 10px;
   border: 2px solid gray;
   color: #CCCCFF;
 }
@@ -26,7 +23,9 @@
   justify-content: center;
   align-items: center;
   margin-top: 1rem;
-  text-decoration: underline black; 
+  text-decoration: underline black;
+  margin-left: 5px;
+  margin-right: 5px;
 }
 
 .column {
@@ -38,6 +37,7 @@
   display: flex;
   justify-content: center;
   margin-top: 6rem;
+  align-items: center;
 }
 
 .bottom {
@@ -59,7 +59,7 @@
       <view class="marginleft">
         <text>意见反馈</text>
       </view>
-      <view class="backer" style="maxlength:10;" @tap = "border">
+      <view class="backer" style="maxlength" @tap = "border">
         <textarea space = "nbsp" maxlength = "140" class="border"></textarea>
       </view>
       <view class="backer">
@@ -74,7 +74,7 @@ import wepy from 'wepy'
 
 export default class Index extends wepy.page {
   config = {
-    navigationBarTitleText: '男人的魅力'
+    navigationBarTitleText: '男士流行发型指南攻略'
   }
   data = {
     height: 20,

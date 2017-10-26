@@ -20,14 +20,14 @@
         <image class="photo" src="{{first}}"/>
         <view class="row ">
         <text class="text1">{{wepyy}}</text>
-         <image class="input" bindtap="star" src="{{collect ? '../image/五角星 16.12.59.png' : star}}"/>
+         <image class="input" bindtap="star" src="{{collect ? '../image/star2.png' : star}}"/>
       </view>
       </view>
       <view class="column six">
         <image class="photo" src="{{like}}"/>
         <view class="row ">
         <text class="text1">{{direction}}</text>
-        <image class="input" bindtap="study" src="{{cat ? '../image/五角星 16.12.59.png' : ss}}"/>
+        <image class="input" bindtap="study" src="{{cat ? '../image/star2.png' : ss}}"/>
       </view>
       </view>
     </view>
@@ -37,14 +37,14 @@
         <image class="photo" src="{{finish}}"/>
         <view class="row ">
         <text class="text1">{{from}}</text>
-         <image class="input" bindtap="sw" src="{{sa ? '../image/五角星 16.12.59.png' : sw}}"/>
+         <image class="input" bindtap="sw" src="{{sa ? '../image/star2.png' : sw}}"/>
       </view>
       </view>
       <view class="column six">
         <image class="photo" src="{{camera}}"/>
         <view class="row ">
         <text class="text1">{{wife}}</text>
-        <image class="input" bindtap="size" src="{{ab ? '../image/五角星 16.12.59.png' : size}}"/>
+        <image class="input" bindtap="size" src="{{ab ? '../image/star2.png' : size}}"/>
       </view>
       </view>
     </view>
@@ -54,14 +54,14 @@
         <image class="photo" src="{{ring}}"/>
          <view class="row ">
         <text class="text1">{{sister1}}</text>
-        <image class="input" bindtap="saction" src="{{find ? '../image/五角星 16.12.59.png' : saction}}"/>
+        <image class="input" bindtap="saction" src="{{find ? '../image/star2.png' : saction}}"/>
       </view>
       </view>
       <view class="column six">
         <image class="photo" src="{{lipstrick}}"/>
         <view class="row ">
         <text class="text1">{{sister}}</text>
-        <image class="input" bindtap="clas" src="{{sun ? '../image/五角星 16.12.59.png' : class}}"/>
+        <image class="input" bindtap="clas" src="{{sun ? '../image/star2.png' : class}}"/>
       </view>
       </view>
     </view>
@@ -71,14 +71,14 @@
         <image class="photo" src="{{flower}}"/>
         <view class="row ">
         <text class="text1">{{mother}}</text>
-        <image class="input" bindtap="sad" src="{{back ? '../image/五角星 16.12.59.png' : sad}}"/>
+        <image class="input" bindtap="sad" src="{{back ? '../image/star2.png' : sad}}"/>
       </view>
       </view>
       <view class="column six">
         <image class="photo" src="{{elder}}"/>
         <view class="row ">
         <text class="text1">{{son}}</text>
-        <image class="input" bindtap="wonder" src="{{rain ? '../image/五角星 16.12.59.png' : wonder}}"/>
+        <image class="input" bindtap="wonder" src="{{rain ? '../image/star2.png' : wonder}}"/>
       </view>
       </view>
     </view>

@@ -9,6 +9,7 @@
 .find {
   display: flex;
   justify-content: center;
+  align-items: center;
   flex-direction: row;
   flex-wrap: wrap;
   margin: 40rpx 20rpx;

@@ -9,6 +9,7 @@
 .find {
   display: flex;
   justify-content: center;
+  align-items: center;
   flex-direction: row;
   flex-wrap: wrap;
   margin: 40rpx 20rpx;
@@ -99,7 +100,7 @@ import wepy from 'wepy'
 import skip from '../util/skip.js'
 export default class Homepage extends wepy.page {
   config = {
-    navigationBarTitleText: '男士发型流行指南攻略',
+    navigationBarTitleText: '男士流行发型指南攻略',
     enablePullDownRefresh: 'true'
   };
   data = {

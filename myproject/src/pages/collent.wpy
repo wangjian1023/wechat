@@ -7,8 +7,8 @@
 }
 
 .userinfo-avatar {
-  width: 80rpx;
-  height: 80rpx;
+  width: 70px;
+  height: 70px;
   border-radius: 50%;
 }
 
@@ -28,8 +28,9 @@
 }
 
 .text {
-  font-size: 20px;
-  color: gray;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .background {
@@ -44,12 +45,17 @@
 
 .get {
   display: flex;
-  align-content: center;
+  align-items: center;
+  justify-content: center;
   border: 2px solid whitesmoke;
-  border-radius: 13px;
-  /* height: 40px;
-  width: 300px; */
+  border-radius: 15px;
   background-color: white;
+  justify-content: space-between;
+  font-size: 20px;
+  color: gray;
+  height: 70px;
+  width: 95%;
+
 }
 
 .center {
@@ -72,7 +78,8 @@
   ;
 }
 .mouse {
-  margin-top: 10px;
+  display: flex;
+  margin-top: 40px;
 }
 
 .photo {
@@ -84,17 +91,27 @@
 
 }
 
-.back {
+.des {
   display: flex;
   justify-content: flex-end;
+}
 
-  
+.din {
+  display: flex;
+  flex-direction: row;
+}
+.dask {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  margin-left: 10px;
+  margin-right: 10px;
 }
 </style>
 
 <template>
-<view> 
-<view class="background" style="height: {{height}}px; width: {{width}}px">
+<view class="mouse"> 
+  <view class="background" style="height: {{height}}px; width: {{width}}px">
   <view>
     <view class="yes"></view>  
     <view class="center">
@@ -102,49 +119,56 @@
         <image class="userinfo-avatar" src="{{avatarUrl}}" background-size="cover" />
         <view class="userinfo-nickname">{{nickname}}</view>
       </view>
+    </view>  
 
-      <view @tap="a" class="text get cat">
-        <image class="photo" src="{{product}}"></image>
-        <text>我的收藏</text>
-        <text>></text>
+      <view @tap="a" class="get cat ">
+        <view class = "din">
+          <image class="photo" src="{{product}}"></image>
+          <text class="text">我的收藏</text>
+        </view>
+       <view>
+         <text class="des">></text>
+       </view>
       </view>
 
-      <view @tap="b" class="text get mouse">
-        <view>
+      <view @tap="b" class="get mouse">
+        <view class = "din">
           <image class="photo" src="{{tickling}}"></image>
-        </view>
+          <text class="text">反馈意见</text>
+        </view>  
         <view>
-          <text>用户反馈</text>
+          <text class="des">></text>
+        </view>
+      </view>
+
+      <view @tap="c" class="get">
+        <view class = "din">
+           <image class="photo" src="{{developer}}"></image>
+           <text class="text">关于我们</text>
+        </view> 
+        <view>
           <text>></text>
         </view>
       </view>
-      <view @tap="c" class="get text mouse">
-        <view>
-            <image class="photo" src="{{developer}}"></image>
-          </view>
-        <view>
-          <text>关于我们</text>
-          <text>></text>
-        </view>
-      </view>
+
     </view>
   </view>
-</view>
 </view>
 </template>
 
 <script>
 import wepy from 'wepy'
 
-export default class Index extends wepy.page {
+export default class Collent extends wepy.page {
   config = {
-    navigationBarTitleText: '男人流行发型指南攻略'
+    navigationBarTitleText: '男士流行发型指南攻略'
   }
   data = {
     src: '',
     avatarUrl: '',
     nickname: '',
     height: 0,
+    width: 0,
     developer: '../image/developer.png',
     product: '../image/product.png',
     tickling: '../image/tickling.png'
@@ -173,8 +197,6 @@ export default class Index extends wepy.page {
       success: function(res) {
         self.nickname = res.userInfo.nickName
         self.avatarUrl = res.userInfo.avatarUrl
-        self.height = res.windowHeight
-        self.width = res.windowWidth
       }
     })
     wepy.getSystemInfo({
