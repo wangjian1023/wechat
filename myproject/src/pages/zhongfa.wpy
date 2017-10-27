@@ -31,7 +31,7 @@
 </style>
 
 <template>
-  <view class="">
+  <view class="background" style="height: {{height}}px; width: {{width}}px;">
     <scroll-view scroll-x="true">
       <view class="row" bindsxroll="scroll">
         <view class="border" style="border: 2px solid {{color}};">
@@ -73,112 +73,122 @@ export default class Index extends wepy.page {
   }
   data = {
     src: '',
-    color: 'red',
-    color1: 'black',
-    color2: 'black',
-    color3: 'black',
-    color4: 'black',
-    color5: 'black',
-    color6: 'black',
-    color7: 'black'
+    color: 'gray',
+    color1: '#303030',
+    color2: '#303030',
+    color3: '#303030',
+    color4: '#303030',
+    color5: '#303030',
+    color6: '#303030',
+    color7: '#303030',
+    height: 0,
+    width: 0
   }
   methods = {
     zuire() {
       let self = this
-      self.color = 'red'
-      self.color1 = 'black'
-      self.color2 = 'black'
-      self.color3 = 'black'
-      self.color4 = 'black'
-      self.color5 = 'black'
-      self.color6 = 'black'
-      self.color7 = 'black'
+      self.color = 'gray'
+      self.color1 = '#303030'
+      self.color2 = '#303030'
+      self.color3 = '#303030'
+      self.color4 = '#303030'
+      self.color5 = '#303030'
+      self.color6 = '#303030'
+      self.color7 = '#303030'
     },
 
     data1() {
       let self = this
-      self.color = 'black'
-      self.color1 = 'red'
-      self.color2 = 'black'
-      self.color3 = 'black'
-      self.color4 = 'black'
-      self.color5 = 'black'
-      self.color6 = 'black'
-      self.color7 = 'black'
+      self.color = '#303030'
+      self.color1 = 'gray'
+      self.color2 = '#303030'
+      self.color3 = '#303030'
+      self.color4 = '#303030'
+      self.color5 = '#303030'
+      self.color6 = '#303030'
+      self.color7 = '#303030'
     },
 
     egg() {
       let self = this
-      self.color = 'black'
-      self.color1 = 'black'
-      self.color2 = 'red'
-      self.color3 = 'black'
-      self.color4 = 'black'
-      self.color5 = 'black'
-      self.color6 = 'black'
-      self.color7 = 'black'
+      self.color = '#303030'
+      self.color1 = '#303030'
+      self.color2 = 'gray'
+      self.color3 = '#303030'
+      self.color4 = '#303030'
+      self.color5 = '#303030'
+      self.color6 = '#303030'
+      self.color7 = '#303030'
     },
 
     props() {
       let self = this
-      self.color = 'black'
-      self.color1 = 'black'
-      self.color2 = 'black'
-      self.color3 = 'red'
-      self.color4 = 'black'
-      self.color5 = 'black'
-      self.color6 = 'black'
-      self.color7 = 'black'
+      self.color = '#303030'
+      self.color1 = '#303030'
+      self.color2 = '#303030'
+      self.color3 = 'gray'
+      self.color4 = '#303030'
+      self.color5 = '#303030'
+      self.color6 = '#303030'
+      self.color7 = '#303030'
     },
 
     script() {
       let self = this
-      self.color = 'black'
-      self.color1 = 'black'
-      self.color2 = 'black'
-      self.color3 = 'black'
-      self.color4 = 'red'
-      self.color5 = 'black'
-      self.color6 = 'black'
-      self.color7 = 'black'
+      self.color = '#303030'
+      self.color1 = '#303030'
+      self.color2 = '#303030'
+      self.color3 = '#303030'
+      self.color4 = 'gray'
+      self.color5 = '#303030'
+      self.color6 = '#303030'
+      self.color7 = '#303030'
     },
 
     method() {
       let self = this
-      self.color = 'black'
-      self.color1 = 'black'
-      self.color2 = 'black'
-      self.color3 = 'black'
-      self.color4 = 'black'
-      self.color5 = 'red'
-      self.color6 = 'black'
-      self.color7 = 'black'
+      self.color = '#303030'
+      self.color1 = '#303030'
+      self.color2 = '#303030'
+      self.color3 = '#303030'
+      self.color4 = '#303030'
+      self.color5 = 'gray'
+      self.color6 = '#303030'
+      self.color7 = '#303030'
     },
 
     less() {
       let self = this
-      self.color = 'black'
-      self.color1 = 'black'
-      self.color2 = 'black'
-      self.color3 = 'black'
-      self.color4 = 'black'
-      self.color5 = 'black'
-      self.color6 = 'red'
-      self.color7 = 'black'
+      self.color = '#303030'
+      self.color1 = '#303030'
+      self.color2 = '#303030'
+      self.color3 = '#303030'
+      self.color4 = '#303030'
+      self.color5 = '#303030'
+      self.color6 = 'gray'
+      self.color7 = '#303030'
     },
 
     page() {
       let self = this
-      self.color = 'black'
-      self.color1 = 'black'
-      self.color2 = 'black'
-      self.color3 = 'black'
-      self.color4 = 'black'
-      self.color5 = 'black'
-      self.color6 = 'black'
-      self.color7 = 'red'
+      self.color = '#303030'
+      self.color1 = '#303030'
+      self.color2 = '#303030'
+      self.color3 = '#303030'
+      self.color4 = '#303030'
+      self.color5 = '#303030'
+      self.color6 = '#303030'
+      self.color7 = 'gray'
     }
   }
-  onLoad() { }
+  onLoad() {
+    let self = this
+    wepy.getSystemInfo({
+      success(res) {
+        self.height = res.windowHeight
+        self.width = res.windowWidth
+      }
+    })
+  }
 }
 </script>

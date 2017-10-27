@@ -1,5 +1,5 @@
 
-  <view class="">
+  <view class="background" style="height: {{height}}px; width: {{width}}px;">
     <scroll-view scroll-x="true">
       <view class="row" bindsxroll="scroll">
         <view class="border" style="border: 2px solid {{color}};">
