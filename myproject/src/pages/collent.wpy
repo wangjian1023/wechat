@@ -94,10 +94,7 @@
 .end {
   display: flex;
   justify-content: flex-end;
-  font-size: 30px;
-  color: gray;
   align-items: center;
-  height: 50px;
 }
 
 .map {
@@ -149,8 +146,8 @@
           <image class="photo" src="{{product}}"></image>
           <text class="text">我的收藏</text>
         </view>
-       <view>
-         <text class="end">></text>
+       <view class="end">
+         <image class="photo" src="{{number}}"></image>
        </view>
       </view>
 
@@ -159,9 +156,9 @@
           <image class="photo" src="{{tickling}}"></image>
           <text class="text">反馈意见</text>
         </view>  
-        <view>
-          <text class="end">></text>
-        </view>
+        <view class="end">
+         <image class="photo" src="{{number1}}"></image>
+       </view>
       </view>
 
       <view @tap="c" class="get">
@@ -169,9 +166,9 @@
            <image class="photo" src="{{developer}}"></image>
            <text class="text">关于我们</text>
         </view> 
-        <view>
-          <text class="end">></text>
-        </view>
+        <view class="end">
+         <image class="photo" src="{{figure}}"></image>
+       </view>
       </view>
 
     </view>
@@ -194,7 +191,10 @@ export default class Collent extends wepy.page {
     width: '',
     developer: '../image/developer.png',
     product: '../image/product.png',
-    tickling: '../image/tickling.png'
+    tickling: '../image/tickling.png',
+    number: '../image/number.png',
+    number1: '../image/number.png',
+    figure: '../image/number.png'
   }
 
   methods = {
