@@ -116,7 +116,7 @@ export default class Homepage extends wepy.page {
     indicatorDots: true,
     color: 'white',
     color1: 'gray',
-    height: '',
+    height: 0,
     width: 0
   }
   methods = {

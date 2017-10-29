@@ -1,2 +1,22 @@
-"use strict";
-//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImxpc3QuanMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJsaXN0LmpzIiwic291cmNlc0NvbnRlbnQiOltdfQ==
+'use strict';
+
+module.exports = [{
+  recName: '情感分享',
+  recPhoto: 'http://mpic.tiankong.com/486/63e/48663e40af13902ae8c992264b6b1476/640.jpg@300h'
+}, {
+  recName: '两性话题',
+  recPhoto: 'http://mpic.tiankong.com/6a4/d47/6a4d4774edbf4e232481fe4274198869/640.jpg@300h'
+}, {
+  recName: '工作运势',
+  recPhoto: 'http://mpic.tiankong.com/3c0/55d/3c055d7bf3a8c8c8fdcc06184c0719d5/640.jpg@300h'
+}, {
+  recName: '娱乐资讯',
+  recPhoto: 'http://mpic.tiankong.com/da7/fae/da7faec4c74a44d03e507b7ed57357b1/640.jpg@300h'
+}, {
+  recName: '搞笑段子',
+  recPhoto: 'http://mpic.tiankong.com/cf8/d96/cf8d969b3eb3c4710fc63fbf911c2679/640.jpg@300h'
+}, {
+  recName: '电影推送',
+  recPhoto: 'http://mpic.tiankong.com/2c6/84a/2c684a7d18782acc6e31cd624c3431f7/640.jpg@300h'
+}];
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImxpc3QuanMiXSwibmFtZXMiOlsibW9kdWxlIiwiZXhwb3J0cyIsInJlY05hbWUiLCJyZWNQaG90byJdLCJtYXBwaW5ncyI6Ijs7QUFBQUEsT0FBT0MsT0FBUCxHQUFpQixDQUNmO0FBQ0VDLFdBQVMsTUFEWDtBQUVFQyxZQUFVO0FBRlosQ0FEZSxFQUlaO0FBQ0RELFdBQVMsTUFEUjtBQUVEQyxZQUFVO0FBRlQsQ0FKWSxFQU9aO0FBQ0RELFdBQVMsTUFEUjtBQUVEQyxZQUFVO0FBRlQsQ0FQWSxFQVVaO0FBQ0RELFdBQVMsTUFEUjtBQUVEQyxZQUFVO0FBRlQsQ0FWWSxFQWFaO0FBQ0RELFdBQVMsTUFEUjtBQUVEQyxZQUFVO0FBRlQsQ0FiWSxFQWdCWjtBQUNERCxXQUFTLE1BRFI7QUFFREMsWUFBVTtBQUZULENBaEJZLENBQWpCIiwiZmlsZSI6Imxpc3QuanMiLCJzb3VyY2VzQ29udGVudCI6WyJtb2R1bGUuZXhwb3J0cyA9IFtcbiAge1xuICAgIHJlY05hbWU6ICfmg4XmhJ/liIbkuqsnLFxuICAgIHJlY1Bob3RvOiAnaHR0cDovL21waWMudGlhbmtvbmcuY29tLzQ4Ni82M2UvNDg2NjNlNDBhZjEzOTAyYWU4Yzk5MjI2NGI2YjE0NzYvNjQwLmpwZ0AzMDBoJ1xuICB9LCB7XG4gICAgcmVjTmFtZTogJ+S4pOaAp+ivnemimCcsXG4gICAgcmVjUGhvdG86ICdodHRwOi8vbXBpYy50aWFua29uZy5jb20vNmE0L2Q0Ny82YTRkNDc3NGVkYmY0ZTIzMjQ4MWZlNDI3NDE5ODg2OS82NDAuanBnQDMwMGgnXG4gIH0sIHtcbiAgICByZWNOYW1lOiAn5bel5L2c6L+Q5Yq/JyxcbiAgICByZWNQaG90bzogJ2h0dHA6Ly9tcGljLnRpYW5rb25nLmNvbS8zYzAvNTVkLzNjMDU1ZDdiZjNhOGM4YzhmZGNjMDYxODRjMDcxOWQ1LzY0MC5qcGdAMzAwaCdcbiAgfSwge1xuICAgIHJlY05hbWU6ICflqLHkuZDotYTorq8nLFxuICAgIHJlY1Bob3RvOiAnaHR0cDovL21waWMudGlhbmtvbmcuY29tL2RhNy9mYWUvZGE3ZmFlYzRjNzRhNDRkMDNlNTA3YjdlZDU3MzU3YjEvNjQwLmpwZ0AzMDBoJ1xuICB9LCB7XG4gICAgcmVjTmFtZTogJ+aQnueskeauteWtkCcsXG4gICAgcmVjUGhvdG86ICdodHRwOi8vbXBpYy50aWFua29uZy5jb20vY2Y4L2Q5Ni9jZjhkOTY5YjNlYjNjNDcxMGZjNjNmYmY5MTFjMjY3OS82NDAuanBnQDMwMGgnXG4gIH0sIHtcbiAgICByZWNOYW1lOiAn55S15b2x5o6o6YCBJyxcbiAgICByZWNQaG90bzogJ2h0dHA6Ly9tcGljLnRpYW5rb25nLmNvbS8yYzYvODRhLzJjNjg0YTdkMTg3ODJhY2M2ZTMxY2Q2MjRjMzQzMWY3LzY0MC5qcGdAMzAwaCdcbiAgfVxuXG5dXG4iXX0=

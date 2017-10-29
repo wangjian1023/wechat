@@ -23,10 +23,31 @@
         <view class="border" style="border: 2px solid {{color6}};">
           <text bindtap="less" class="text">背头</text>
         </view>
-        <view class="border" style="border: 2px solid {{color7}};">
-          <text bindtap="page" class="text">锅盖头</text>
+      <!-- <view bindtap= "display" class="recommend " wx:for="{{content}}" wx:key="index" id="{{index}}" >  
+        <view class="find product">
+          <image class="recPhoto" src="{{item.recPhoto}}" mode="scaleToFill" />
+          <text class="recName">{{item.recName}}</text>
         </view>
+      </view> -->
+      <!-- <view class="pop">
+      <view class="column six">
+        <image class="photo" src="{{ring}}" />
+         <view class="row ">
+        <text class="text1">{{sister1}}</text>
+        <image class="input" bindtap="saction" src="{{find ? '../image/star2.png' : saction}}" />
       </view>
+      </view>
+      <view class="column six">
+        <image class="photo" src="{{lipstrick}}" />
+        <view class="row ">
+        <text class="text1">{{sister}}</text>
+        <image class="input" bindtap="clas" src="{{sun ? '../image/star2.png' : class}}" />
+      </view>
+      </view> -->
+    </view>
+    
+  
+      
     </scroll-view>
 
   </view>
