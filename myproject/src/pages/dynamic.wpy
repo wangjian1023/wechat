@@ -85,7 +85,7 @@
       <text>热门消息</text>
     </view>
     <view class="find product">
-        <view  @tap = "display" class="recommend " wx:for="{{content}}" wx:key="index" id="{{index}}">
+        <view  @tap = "display" class="recommend " wx:for="{{skip}}" wx:key="index" id="{{index}}">
           <image class="recPhoto" src="{{item.recPhoto}}" mode="scaleToFill" />
           <text class="recName">{{item.recName}}</text>
         </view>
