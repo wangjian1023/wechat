@@ -10,7 +10,7 @@ const app = dva({
   // history: browserHistory,
 });
 
-// 2. Plugins
+// 2. Plugins 插件
 // app.use({});
 
 // 3. Register global model
